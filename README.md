@@ -10,6 +10,7 @@ git clone git@bitbucket.org:caanaan/linuxdevconfig.git ~/.myconfig
 ```
 
 * To install / update the Vim installation
+> NOTE - installing the VIM plugins will recompile the YouCompleteMe libs, which can take a while...
 ```
 ~/.myconfig/vim/vimInstall.sh
 ```
