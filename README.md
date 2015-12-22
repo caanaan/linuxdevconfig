@@ -5,4 +5,6 @@ This project contains various configuration and maintenance files to ensure a co
 
 # Installation
 Clone this repo into your home directory:
-'git clone git@bitbucket.org:caanaan/linuxdevconfig.git ~/.myconfig
+```
+git clone git@bitbucket.org:caanaan/linuxdevconfig.git ~/.myconfig
+```
