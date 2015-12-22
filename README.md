@@ -22,3 +22,11 @@ git clone git@bitbucket.org:caanaan/linuxdevconfig.git ~/.myconfig
 
 > NOTE - both of the above install required packages and create symlinks for the .vimrc, .zshrc, and other config files.
 
+# Cheat Sheets
+* Vim
+   * https://people.csail.mit.edu/vgod/vim/vim-cheat-sheet-en.png
+   * http://vim.rtorr.com/
+   * http://vimcheatsheet.com/
+* Zsh
+* Docker
+   * https://www.linode.com/docs/applications/containers/docker-quick-reference-cheat-sheet

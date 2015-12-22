@@ -61,8 +61,8 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 "Set tab formats
 set expandtab
-set shiftwidth=4
-set softtabstop=4
+set shiftwidth=3
+set softtabstop=3
 
 "Enable mouse support
 set ttyfast
