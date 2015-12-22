@@ -41,6 +41,12 @@ filetype plugin indent on    " required
 "Map Ctrl+N for Nerdtree
 map <C-n> :NERDTreeToggle<CR> 
 
+"Map Ctrl+Arrow keys to window movement
+nmap <silent> <C-Up> :wincmd k<CR>
+nmap <silent> <C-Down> :wincmd j<CR>
+nmap <silent> <C-Left> :wincmd h<CR>
+nmap <silent> <C-Right> :wincmd l<CR>
+
 "Autostart NerdTree if no file arguments
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
