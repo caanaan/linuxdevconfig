@@ -1,0 +1,55 @@
+# Load Anitgen - the zsh package manager
+#  * Requires the following installed: Zsh, Git, and Oh-my-zsh.
+#   - sudo apt-get install zsh
+#   - sudo apt-get install git-core
+#   - sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+#  * Antigen must be installed first. 
+#   - cd ~/.zsh
+#   - git clone https://github.com/zsh-users/antigen.git
+source ~/.antigen/antigen/antigen.zsh
+
+# Load the oh-my-zsh's library.
+antigen use oh-my-zsh
+
+# Bundles from the default repo (robbyrussell's oh-my-zsh).
+antigen bundle git
+antigen bundle pip
+antigen bundle command-not-found
+antigen bundle autojump
+antigen bundle common-aliases
+antigen bundle dirhistory
+antigen bundle docker
+antigen bundle fasd
+antigen bundle python
+antigen bundle sudo
+antigen bundle rake
+antigen bundle rsync
+antigen bundle history
+
+# Syntax highlighting bundle.
+antigen bundle zsh-users/zsh-syntax-highlighting
+
+# Autosuggestions
+antigen bundle tarruda/zsh-autosuggestions
+
+# Other zsh plugins
+antigen bundle djui/alias-tips
+antigen bundle voronkovich/gitignore.plugin.zsh
+antigen bundle zsh-users/zsh-history-substring-search
+antigen bundle zsh-users/zsh-completions src
+#antigen bundle nojhan/liquidprompt #Auto-changing prompt.  Cool need to evaluate.
+#antigen bundle skx/sysadmin-util #Note sure this is needed
+#antigen bundle b4b4r07/enhancd #Need to get fzf working, then try
+
+# Set personal aliases
+alias zshconfig="vim ~/.myconfig/zsh/zshrc"
+alias ohmyzsh="vim ~/.oh-my-zsh"
+alias zshsource="source ~/.zshrc"
+alias vimconfig="vim ~/.myconfig/vim/vimrc"
+alias kvm="kvmswitch.sh"
+
+# Load the theme.
+antigen theme robbyrussell
+
+# Tell antigen that you're done.
+antigen apply
