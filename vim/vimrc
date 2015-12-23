@@ -69,6 +69,9 @@ set ttyfast
 set mouse=a
 set ttymouse=xterm2
 
+"Set other editor configs
+set number
+
 "Set a default ycm_extra_conf.py file
 let g:ycm_global_ycm_extra_conf = "~/.ycm_extra_conf_default.py"
 
