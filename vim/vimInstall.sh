@@ -1,5 +1,29 @@
 #!/bin/bash
 
+#Determine what platform the script is running on and set appropriate variables.
+case "$(uname -s)" in
+   Darwin)
+     echo 'Mac OS X'
+     PLATFORM=MAC
+     PACK_MAN_CMD=brew
+     ;;
+   Linux)
+     echo 'Linux'
+     PLATFORM=LINUX
+     PACK_MAN_CMD=apt-get
+     ;;
+   CYGWIN*|MINGW32*|MSYS*)
+     echo 'MS Windows'
+     PLATFORM=WINDOWS
+     PACK_MAN_CMD=pact
+     ;;
+   *)
+     echo 'other OS' 
+     ;;
+esac
+
+echo "Platform is $PLATFORM"
+
 #Ensure that the cwd is correct
 cd ~
 
@@ -14,7 +38,7 @@ for pkg in $DEPS; do
     if dpkg --get-selections | grep -q "^$pkg[[:space:]]*install$" >/dev/null; then
         echo -e "$pkg is already installed."
     else
-        sudo apt-get -y install $pkg
+        sudo $PACK_MAN_CMD -y install $pkg
         echo -e "Installed $pkg..."
     fi
 done
