@@ -7,7 +7,7 @@ cd ~
 sudo -v
 
 #Ensure that zsh related packages are installed
-DEPS="zsh git-core"
+DEPS="zsh git-core tmux"
 
 for pkg in $DEPS; do
     if dpkg --get-selections | grep -q "^$pkg[[:space:]]*install$" >/dev/null; then
@@ -42,6 +42,7 @@ fi
 
 #Backup the .zshrc and the ycm_extra_conf_default files and remove the old versions
 FILES="~/.zshrc
+~/.tmux.conf
 "
 for f in $FILES
 do
@@ -60,4 +61,4 @@ done
 
 #Create symlinks from .myconfig/zsh path to the canonical locations for the config files
 ln -sf ~/.myconfig/zsh/zshrc ~/.zshrc
-
+ln -sf ~/.myconfig/zsh/.tmux.conf ~/.tmux.conf

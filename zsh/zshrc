@@ -1,7 +1,8 @@
 # Load Anitgen - the zsh package manager
-#  * Requires the following installed: Zsh, Git, and Oh-my-zsh.
+#  * Requires the following installed: Zsh, Git, tmux, and Oh-my-zsh.
 #   - sudo apt-get install zsh
 #   - sudo apt-get install git-core
+#   - sudo apt-get install tmux
 #   - sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 #  * Antigen must be installed first. 
 #   - cd ~/.zsh
@@ -25,6 +26,8 @@ antigen bundle sudo
 antigen bundle rake
 antigen bundle rsync
 antigen bundle history
+antigen bundle tmux
+antigen bundle tmuxinator
 
 # Syntax highlighting bundle.
 antigen bundle zsh-users/zsh-syntax-highlighting
@@ -46,6 +49,7 @@ alias zshconfig="vim ~/.myconfig/zsh/zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 alias zshsource="source ~/.zshrc"
 alias vimconfig="vim ~/.myconfig/vim/vimrc"
+alias tmuxconfig="vim ~/.myconfig/zsh/tmux.conf"
 alias kvm="kvmswitch.sh"
 
 # Load the theme.
@@ -53,3 +57,10 @@ antigen theme robbyrussell
 
 # Tell antigen that you're done.
 antigen apply
+
+# Other settings
+# if you do a 'rm *', Zsh will give you a sanity check!
+setopt RM_STAR_WAIT
+# allows you to type Bash style comments on your command line
+# good 'ol Bash
+setopt interactivecomments
