@@ -66,7 +66,12 @@ fi
 
 #Verify that tmuxinator is installed
 # TODO - check if it is already installed...
-sudo gem install tmuxinator
+if gem list tmuxinator -i; then
+   echo "Tmuxinator already installed."
+else
+   echo "Installing Tmuxinator."
+   sudo gem install tmuxinator
+fi
 
 #Backup the .zshrc and the ycm_extra_conf_default files and remove the old versions
 FILES="~/.zshrc
@@ -97,5 +102,5 @@ sandbox-dev.yml
 "
 for f in $FILES
 do
-   ln -sf ~/.myconfig/tmuxinator/$f ~/.tmuxinator/$f
+   ln -sf ~/.myconfig/zsh/tmuxinator/$f ~/.tmuxinator/$f
 done

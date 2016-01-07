@@ -29,7 +29,8 @@ root: ~/Sandboxes
 
 windows:
   - editor:
-      layout: main-vertical
+      #layout: main-vertical
+      layout: 5154,205x57,0,0{123x57,0,0,0,81x57,124,0[81x36,124,0,1,81x20,124,37,2]}
       panes:
         - vim
         - cd ~/Sandboxes

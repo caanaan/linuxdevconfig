@@ -30,7 +30,8 @@ root: ~/.myconfig
 windows:
   - editor:
       root: ~/.myconfig 
-      layout: main-vertical
+      #layout: main-vertical
+      layout: 5ba5,205x57,0,0{134x57,0,0,1,70x57,135,0,2}
       panes:
         - vim
         - cd ~/.myconfig
