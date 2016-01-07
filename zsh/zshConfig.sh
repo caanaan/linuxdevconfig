@@ -31,7 +31,7 @@ cd ~
 sudo -v
 
 #Ensure that zsh related packages are installed
-DEPS="zsh git-core tmux"
+DEPS="zsh git-core tmux ruby-full"
 
 for pkg in $DEPS; do
     if dpkg --get-selections | grep -q "^$pkg[[:space:]]*install$" >/dev/null; then
@@ -64,6 +64,10 @@ else
    echo "Installed Antigen..."
 fi
 
+#Verify that tmuxinator is installed
+# TODO - check if it is already installed...
+sudo gem install tmuxinator
+
 #Backup the .zshrc and the ycm_extra_conf_default files and remove the old versions
 FILES="~/.zshrc
 ~/.tmux.conf
@@ -85,4 +89,13 @@ done
 
 #Create symlinks from .myconfig/zsh path to the canonical locations for the config files
 ln -sf ~/.myconfig/zsh/zshrc ~/.zshrc
-ln -sf ~/.myconfig/zsh/.tmux.conf ~/.tmux.conf
+ln -sf ~/.myconfig/zsh/tmux.conf ~/.tmux.conf
+
+#Create symlinks from default tmuxinator projects to tmuxinator config area.
+FILES="myconfig.yml
+sandbox-dev.yml
+"
+for f in $FILES
+do
+   ln -sf ~/.myconfig/tmuxinator/$f ~/.tmuxinator/$f
+done

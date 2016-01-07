@@ -27,7 +27,6 @@ antigen bundle rake
 antigen bundle rsync
 antigen bundle history
 antigen bundle tmux
-antigen bundle tmuxinator
 
 # Syntax highlighting bundle.
 antigen bundle zsh-users/zsh-syntax-highlighting
@@ -64,3 +63,5 @@ setopt RM_STAR_WAIT
 # allows you to type Bash style comments on your command line
 # good 'ol Bash
 setopt interactivecomments
+#Set the EDITOR
+export EDITOR='vim'
