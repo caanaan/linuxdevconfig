@@ -51,6 +51,7 @@ alias vimconfig="vim ~/.myconfig/vim/vimrc"
 alias tmuxconfig="vim ~/.myconfig/zsh/tmux.conf"
 alias kvm="kvmswitch.sh"
 alias myconfigcd="cd ~/.myconfig"
+alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | printf '=> Public key copied to pasteboard.\n'";
 
 # Load the theme.
 antigen theme robbyrussell
@@ -66,3 +67,5 @@ setopt RM_STAR_WAIT
 setopt interactivecomments
 #Set the EDITOR
 export EDITOR='vim'
+# Set completion waiting dots
+COMPLETION_WAITING_DOTS="true"
