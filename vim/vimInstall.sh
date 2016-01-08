@@ -81,6 +81,12 @@ vim +PluginInstall +qall
 
 #Compile YouCompleteMe
 cd ~/.vim/bundle/YouCompleteMe
-./install.py --clang-completer
 
+#Check if YCM has already been built
+
+if [ -f ./third_party/ycmd/ycm_core.so ]; then
+   echo "YouCompleteMe is already compiled."
+else
+   ./install.py --clang-completer
+fi
 cd ~
