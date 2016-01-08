@@ -50,6 +50,7 @@ alias zshsource="source ~/.zshrc"
 alias vimconfig="vim ~/.myconfig/vim/vimrc"
 alias tmuxconfig="vim ~/.myconfig/zsh/tmux.conf"
 alias kvm="kvmswitch.sh"
+alias myconfigcf="cd ~/.myconfig"
 
 # Load the theme.
 antigen theme robbyrussell
