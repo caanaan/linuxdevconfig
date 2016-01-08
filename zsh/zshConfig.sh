@@ -70,7 +70,7 @@ if gem list tmuxinator -i; then
    echo "Tmuxinator already installed."
 else
    echo "Installing Tmuxinator."
-   sudo gem install tmuxinator
+   sudo gem install -q tmuxinator
 fi
 
 #Backup the .zshrc and the ycm_extra_conf_default files and remove the old versions
@@ -97,6 +97,7 @@ ln -sf ~/.myconfig/zsh/zshrc ~/.zshrc
 ln -sf ~/.myconfig/zsh/tmux.conf ~/.tmux.conf
 
 #Create symlinks from default tmuxinator projects to tmuxinator config area.
+mkdir ~/.txuminator
 FILES="myconfig.yml
 sandbox-dev.yml
 "
