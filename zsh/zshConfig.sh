@@ -96,8 +96,14 @@ done
 ln -sf ~/.myconfig/zsh/zshrc ~/.zshrc
 ln -sf ~/.myconfig/zsh/tmux.conf ~/.tmux.conf
 
+#Check that txuminator folder exists -- create if it doesn't
+if [ -d ~/.tmuxinator ]; then
+   echo "~/.tmuxinator folder already exists."
+else
+   mkdir ~/.tmuxinator
+fi
+
 #Create symlinks from default tmuxinator projects to tmuxinator config area.
-mkdir ~/.tmuxinator
 FILES="myconfig.yml
 sandbox-dev.yml
 "
