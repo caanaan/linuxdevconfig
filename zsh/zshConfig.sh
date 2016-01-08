@@ -97,7 +97,7 @@ ln -sf ~/.myconfig/zsh/zshrc ~/.zshrc
 ln -sf ~/.myconfig/zsh/tmux.conf ~/.tmux.conf
 
 #Create symlinks from default tmuxinator projects to tmuxinator config area.
-mkdir ~/.txuminator
+mkdir ~/.tmuxinator
 FILES="myconfig.yml
 sandbox-dev.yml
 "
