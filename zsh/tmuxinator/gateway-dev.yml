@@ -34,5 +34,10 @@ windows:
       panes:
         - vim
         - rake shell 
-        - sshpass -p '***REMOVED***' ssh root@gateway_1 -t 'export TERM=xterm; bash -l'
+        - sshpass -p '***REMOVED***' ssh root@gateway_1 -t 'export TERM=xterm; passwd --delete root; bash -l'
         - sudo minicom -D /dev/ttyUSB0 -b 115200 -C ~/minicom.log 
+  - terminals:
+      layout: main-vertical
+      panes: 
+        -  
+        - rake shell
