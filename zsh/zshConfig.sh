@@ -106,6 +106,7 @@ fi
 #Create symlinks from default tmuxinator projects to tmuxinator config area.
 FILES="myconfig.yml
 sandbox-dev.yml
+gateway-dev.yml
 "
 for f in $FILES
 do
