@@ -70,6 +70,17 @@ else
    echo "Installed Antigen..."
 fi
 
+#Verify that TMUX Plugin Manager is already installed
+DIR=~/.tmux/plugins/tpm
+if [ -d $DIR ];
+then
+   echo "TPM is already installed."
+else
+   git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+   echo "Installed TPM..."
+fi
+
+
 #Verify that tmuxinator is installed
 # TODO - check if it is already installed...
 if gem list tmuxinator -i; then
