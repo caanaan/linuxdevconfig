@@ -50,6 +50,7 @@ alias ohmyzsh="vim ~/.oh-my-zsh"
 alias zshsource="source ~/.zshrc"
 alias vimconfig="vim ~/.myconfig/vim/vimrc"
 alias tmuxconfig="vim ~/.myconfig/zsh/tmux.conf"
+alias tmuxsource='tmux source ~/.tmux.conf'
 alias kvm="kvmswitch.sh"
 alias myconfigcd="cd ~/.myconfig"
 alias pubkey="xclip -sel clip < ~/.ssh/id_rsa.pub; printf '=> Public key copied to pasteboard.\n'";
