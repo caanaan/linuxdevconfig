@@ -30,6 +30,12 @@ cd ~
 #Enter the sudo password once
 sudo -v
 
+# Update apt-get sources so that tmux 2.0 can be installed
+sudo apt-get update
+sudo apt-get install -y python-software-properties software-properties-common
+sudo add-apt-repository -y ppa:pi-rho/dev
+sudo apt-get update
+
 #Ensure that zsh related packages are installed
 DEPS="zsh git-core tmux ruby-full silversearcher-ag xclip"
 
