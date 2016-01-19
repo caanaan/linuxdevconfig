@@ -93,6 +93,12 @@ fi
 #TODO - verify if already installed...
 sudo pip install -upgrade httpie
 
+#Install icdiff
+#TODO - verify that it is already installed...
+curl -s https://raw.githubusercontent.com/jeffkaufman/icdiff/release-1.7.3/icdiff \
+     | sudo tee /usr/local/bin/icdiff > /dev/null \
+       && sudo chmod ugo+rx /usr/local/bin/icdiff
+
 #Backup the .zshrc and the ycm_extra_conf_default files and remove the old versions
 FILES="~/.zshrc
 ~/.tmux.conf
