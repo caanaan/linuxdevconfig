@@ -37,7 +37,7 @@ sudo add-apt-repository -y ppa:pi-rho/dev
 sudo apt-get update
 
 #Ensure that zsh related packages are installed
-DEPS="zsh git-core tmux ruby-full silversearcher-ag xclip"
+DEPS="zsh git-core tmux ruby-full silversearcher-ag xclip python-pip"
 
 for pkg in $DEPS; do
     if dpkg --get-selections | grep -q "^$pkg[[:space:]]*install$" >/dev/null; then
@@ -82,13 +82,16 @@ fi
 
 
 #Verify that tmuxinator is installed
-# TODO - check if it is already installed...
 if gem list tmuxinator -i; then
    echo "Tmuxinator already installed."
 else
    echo "Installing Tmuxinator."
    sudo gem install -q tmuxinator
 fi
+
+#Verify if httpie is installed
+#TODO - verify if already installed...
+sudo pip install -upgrade httpie
 
 #Backup the .zshrc and the ycm_extra_conf_default files and remove the old versions
 FILES="~/.zshrc
