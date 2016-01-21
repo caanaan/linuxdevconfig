@@ -40,7 +40,7 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 "Set the default colorscheme
-colorscheme zenesque
+colorscheme anotherdark
 
 "Map Ctrl+N for Nerdtree
 map <C-n> :NERDTreeToggle<CR> 
