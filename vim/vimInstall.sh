@@ -71,9 +71,13 @@ do
    rm -f $f
 done
 
+#Ensure that the vim colors folder exists
+mkdir ~/.vim/colors
+
 #Create symlinks from .myconfig/vim path to the canonical locations for the config files
 ln -sf ~/.myconfig/vim/vimrc ~/.vimrc
 ln -sf ~/.myconfig/vim/ycm_extra_conf_default.py ~/.ycm_extra_conf_default.py
+ln -sf ~/.myconfig/vim/lukes-dev-scheme.vim ~/.vim/colors/lukes-dev-scheme.vim
 
 #Install all the plugins
 # NOTE - there may be an ycm error, since it isn't compiled yet.

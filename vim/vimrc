@@ -11,7 +11,7 @@ Plugin 'VundleVim/Vundle.vim'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/nerdcommenter'
+Plugin 'The-NERD-Commenter'
 Plugin 'scrooloose/syntastic'
 Plugin 'https://github.com/plasticboy/vim-markdown.git'
 Plugin 'tpope/vim-fugitive'
@@ -22,15 +22,15 @@ Plugin 'tpope/vim-sensible'
 Plugin 'SirVer/ultisnips'
 "Plugin 'triglav/vim-ultisnips'
 Plugin 'honza/vim-snippets'
-Plugin 'flazz/vim-colorschemes'
-Plugin 'qualiabyte/vim-colorstepper'
+"Plugin 'flazz/vim-colorschemes'
+"Plugin 'qualiabyte/vim-colorstepper'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
-filetype plugin indent on    " required
+"filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
+filetype plugin on
+
 " Brief help
 " :PluginList       - lists configured plugins
 " :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
@@ -40,11 +40,19 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
+" 256-color terminal
+set t_Co=256
+
 "Set the default colorscheme
-colorscheme anotherdark
+colorscheme lukes-dev-scheme 
 
 "Map Ctrl+N for Nerdtree
 map <C-n> :NERDTreeToggle<CR> 
+
+"Map Ctrl+T for NerdCommentor Toggle
+"map <C-t> :NERDComToggleComment<CR>
+let mapleader=","
+map cc <leader>c<space>
 
 "Splitting Related
 "Map Ctrl+Arrow keys to window movement for splits
@@ -71,9 +79,6 @@ set splitright
 "Autostart NerdTree if no file arguments
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-
-"Enable the filetype plugin for nerdcommented
-filetype plugin on
 
 "Set tab formats
 set expandtab
