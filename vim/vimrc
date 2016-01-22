@@ -11,6 +11,7 @@ Plugin 'VundleVim/Vundle.vim'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/syntastic'
 Plugin 'https://github.com/plasticboy/vim-markdown.git'
 Plugin 'tpope/vim-fugitive'
@@ -71,6 +72,9 @@ set splitright
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
+"Enable the filetype plugin for nerdcommented
+filetype plugin on
+
 "Set tab formats
 set expandtab
 set shiftwidth=3
@@ -111,3 +115,7 @@ let g:UltiSnipsListSnippets="<c-e>"
 " and close the selection list, same as other IDEs.
 " CONFLICT with some plugins like tpope/Endwise
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
+" NOTE - to reload the vimrc without reloading vim use
+"  :so $MYVIMRC
+" while editing this file.
