@@ -40,6 +40,9 @@ antigen bundle djui/alias-tips
 antigen bundle voronkovich/gitignore.plugin.zsh
 antigen bundle zsh-users/zsh-history-substring-search
 antigen bundle zsh-users/zsh-completions src
+antigen bundle srijanshetty/zsh-pandoc-completion
+antigen bundle srijanshetty/zsh-pip-completion
+antigen bundle jreese/zsh-titles
 #antigen bundle nojhan/liquidprompt #Auto-changing prompt.  Cool need to evaluate.
 #antigen bundle skx/sysadmin-util #Note sure this is needed
 #antigen bundle b4b4r07/enhancd #Need to get fzf working, then try
@@ -56,7 +59,8 @@ alias myconfigcd="cd ~/.myconfig"
 alias pubkey="xclip -sel clip < ~/.ssh/id_rsa.pub; printf '=> Public key copied to pasteboard.\n'";
 
 # Load the theme.
-antigen theme robbyrussell
+#antigen theme robbyrussell
+antigen theme skaro
 
 # Tell antigen that you're done.
 antigen apply

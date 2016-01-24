@@ -43,7 +43,7 @@ for pkg in $DEPS; do
     if dpkg --get-selections | grep -q "^$pkg[[:space:]]*install$" >/dev/null; then
         echo -e "$pkg is already installed."
     else
-        sudo $PACK_MAN_CMD install $pkg
+        sudo $PACK_MAN_CMD -y install $pkg
         echo -e "Installed $pkg..."
     fi
 done
@@ -91,7 +91,8 @@ fi
 
 #Verify if httpie is installed
 #TODO - verify if already installed...
-sudo pip install -upgrade httpie
+sudo pip install httpie
+sudo pip install powerline-status
 
 #Install icdiff
 #TODO - verify that it is already installed...
