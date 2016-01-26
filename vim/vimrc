@@ -29,6 +29,7 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'powerline/fonts'
 Plugin 'edkolev/tmuxline.vim'
 "Plugin 'bling/vim-bufferline'
+Plugin 'Raimondi/delimitMate'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -41,14 +42,11 @@ filetype plugin on
 " :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
 " :PluginSearch foo - searches for foo; append `!` to refresh local cache
 " :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+" :PluginUpdate     - updates plugins with new versions.  Will need to
+"                       recompile YCM afterwards!
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
-
-set shell=zsh
-
-" 256-color terminal
-set t_Co=256
 
 "Set the default colorscheme
 colorscheme lukes-dev-scheme
@@ -88,7 +86,7 @@ let g:airline_symbols.linenr = ''
 "let g:airline#extensions#bufferline#enabled = 1
 
 "Map Ctrl+N for Nerdtree
-map <C-n> :NERDTreeToggle<CR> 
+map <C-n> :NERDTreeToggle<CR>
 
 let g:NERDTreeIndicatorMap = {
   \ "Modified"  : "✹ ",
@@ -133,6 +131,7 @@ autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 let NERDTreeIgnore=['\.git','\.hg']
+"filetype on
 " NERDTress File highlighting
 " TODO - Not sure why this isn't working...
 "function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
@@ -195,7 +194,7 @@ au BufEnter * exec "inoremap <silent> " . g:UltiSnipsExpandTrigger . " <C-R>=g:U
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 let g:UltiSnipsListSnippets="<c-e>"
-" this mapping Enter key to <C-y> to chose the current highlight item 
+" this mapping Enter key to <C-y> to chose the current highlight item
 " and close the selection list, same as other IDEs.
 " CONFLICT with some plugins like tpope/Endwise
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
