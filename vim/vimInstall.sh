@@ -85,9 +85,15 @@ vim +PluginInstall +qall
 
 #Make sure the Powerline patched fonts are installed.
 ~/.vim/bundle/fonts/install.sh
-gsettings set org.gnome.desktop.interface monospace-font-name 'DejaVu Sans Mono for Powerline 11'
-#NOTE - make sure to set the system font to 'DejaVu Sans Mono for Powerline!"
-#or something listed 'for Powerline"
+#NOTE - this will attempt to force the font used for the shell to this, 
+# not sure how (if) this will work for non-Linux systems!
+if [ "$PLATFORM"=="LINUX" ]; then
+   echo "Setting monospace font to 'Deja Sans Mono for Powerline 11'"
+   gsettings set org.gnome.desktop.interface monospace-font-name 'DejaVu Sans Mono for Powerline 11'
+else
+   echo "To see the correct airline and tmuxline fonts, make sure to set the system font"
+   echo " to to 'DejaVu Sans Mono for Powerline!' or something listed for Powerline."
+fi
 
 #Compile YouCompleteMe
 cd ~/.vim/bundle/YouCompleteMe
