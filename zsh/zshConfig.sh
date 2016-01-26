@@ -89,16 +89,26 @@ else
    sudo gem install -q tmuxinator
 fi
 
-#Verify if httpie is installed
-#TODO - verify if already installed...
-sudo pip install httpie
-sudo pip install powerline-status
+#Install pip packages.
+DEPS="httpie"
+for pkg in $DEPS; do
+   if pip list | grep "^$pkg" >/dev/null; then
+      echo -e "$pkg is already installed."
+   else
+      echo -e "Installing $pkg."
+      sudo pip install $pkg
+   fi
+done
 
 #Install icdiff
-#TODO - verify that it is already installed...
-curl -s https://raw.githubusercontent.com/jeffkaufman/icdiff/release-1.7.3/icdiff \
+if hash icdiff 2>/dev/null; then
+   echo "icdiff is already installed."
+else
+   echo "Installing icdiff."
+   curl -s https://raw.githubusercontent.com/jeffkaufman/icdiff/release-1.7.3/icdiff \
      | sudo tee /usr/local/bin/icdiff > /dev/null \
        && sudo chmod ugo+rx /usr/local/bin/icdiff
+fi
 
 #Backup the .zshrc and the ycm_extra_conf_default files and remove the old versions
 FILES="~/.zshrc
