@@ -11,6 +11,7 @@ Plugin 'VundleVim/Vundle.vim'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 Plugin 'scrooloose/nerdtree'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'The-NERD-Commenter'
 Plugin 'scrooloose/syntastic'
 Plugin 'https://github.com/plasticboy/vim-markdown.git'
@@ -43,6 +44,8 @@ filetype plugin on
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
+
+set shell=zsh
 
 " 256-color terminal
 set t_Co=256
@@ -87,8 +90,19 @@ let g:airline_symbols.linenr = ''
 "Map Ctrl+N for Nerdtree
 map <C-n> :NERDTreeToggle<CR> 
 
-"Map Ctrl+T for NerdCommentor Toggle
-"map <C-t> :NERDComToggleComment<CR>
+let g:NERDTreeIndicatorMap = {
+  \ "Modified"  : "✹ ",
+  \ "Staged"    : "✚",
+  \ "Untracked" : "✭",
+  \ "Renamed"   : "➜ ",
+  \ "Unmerged"  : "═",
+  \ "Deleted"   : "✖",
+  \ "Dirty"     : "✗",
+  \ "Clean"     : "✔︎",
+  \ "Unknown"   : "?"
+  \ }
+
+"Set cc to toggle comment and map leader to ,
 let mapleader=","
 map cc <leader>c<space>
 
@@ -117,6 +131,33 @@ set splitright
 "Autostart NerdTree if no file arguments
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+let NERDTreeIgnore=['\.git','\.hg']
+" NERDTress File highlighting
+" TODO - Not sure why this isn't working...
+"function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
+"exec 'autocmd FileType nerdtree highlight ' . a:extension .' ctermbg='. a:bg .' ctermfg='. a:fg .' guibg='. a:guibg .' guifg='. a:guifg
+"exec 'autocmd FileType nerdtree syn match ' . a:extension .' #^\s\+.*'. a:extension .'$#'
+"endfunction
+
+"au VimEnter * call NERDTreeHighlightFile('jade', 'green', 'none', 'green', '#151515')
+"au VimEnter * call NERDTreeHighlightFile('html', 'green', 'none', 'green', '#151515')
+"au VimEnter * call NERDTreeHighlightFile('slim', 'green', 'none', 'green', '#151515')
+"au VimEnter * call NERDTreeHighlightFile('coffee', '5', 'none', '#ff00ff', '#151515')
+"au VimEnter * call NERDTreeHighlightFile('styl', '5', 'none', '#ff00ff', '#151515')
+"au VimEnter * call NERDTreeHighlightFile('less', '5', 'none', '#ff00ff', '#151515')
+"au VimEnter * call NERDTreeHighlightFile('scss', '5', 'none', '#ff00ff', '#151515')
+"au VimEnter * call NERDTreeHighlightFile('sass', '5', 'none', '#ff00ff', '#151515')
+"au VimEnter * call NERDTreeHighlightFile('ini', 'yellow', 'none', 'yellow', '#151515')
+"au VimEnter * call NERDTreeHighlightFile('md', 'blue', 'none', '#3366FF', '#151515')
+"au VimEnter * call NERDTreeHighlightFile('yml', 'yellow', 'none', 'yellow', '#151515')
+"au VimEnter * call NERDTreeHighlightFile('config', 'yellow', 'none', 'yellow', '#151515')
+"au VimEnter * call NERDTreeHighlightFile('conf', 'yellow', 'none', 'yellow', '#151515')
+"au VimEnter * call NERDTreeHighlightFile('json', 'yellow', 'none', 'yellow', '#151515')
+"au VimEnter * call NERDTreeHighlightFile('css', 'cyan', 'none', 'cyan', '#151515')
+"au VimEnter * call NERDTreeHighlightFile('js', 'cyan', 'none', 'cyan', '#151515')
+"au VimEnter * call NERDTreeHighlightFile('rb', 'Red', 'none', '#ffa500', '#151515')
+"au VimEnter * call NERDTreeHighlightFile('py', 'Magenta', 'none', '#ff00ff', '#151515')
 
 "Set tab formats
 set expandtab
