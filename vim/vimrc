@@ -24,6 +24,8 @@ Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 "Plugin 'flazz/vim-colorschemes'
 "Plugin 'qualiabyte/vim-colorstepper'
+Plugin 'vim-airline/vim-airline'
+Plugin 'powerline/fonts'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
