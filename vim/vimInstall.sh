@@ -83,11 +83,13 @@ ln -sf ~/.myconfig/vim/lukes-dev-scheme.vim ~/.vim/colors/lukes-dev-scheme.vim
 # NOTE - there may be an ycm error, since it isn't compiled yet.
 vim +PluginInstall +qall
 
+#Make sure the Powerline patched fonts are installed.
+~/.vim/bundle/fonts/install.sh
+
 #Compile YouCompleteMe
 cd ~/.vim/bundle/YouCompleteMe
 
 #Check if YCM has already been built
-
 if [ -f ./third_party/ycmd/ycm_core.so ]; then
    echo "YouCompleteMe is already compiled."
 else
