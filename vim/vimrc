@@ -26,6 +26,7 @@ Plugin 'honza/vim-snippets'
 "Plugin 'qualiabyte/vim-colorstepper'
 Plugin 'vim-airline/vim-airline'
 Plugin 'powerline/fonts'
+Plugin 'edkolev/tmuxline.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -46,7 +47,38 @@ filetype plugin on
 set t_Co=256
 
 "Set the default colorscheme
-colorscheme lukes-dev-scheme 
+colorscheme lukes-dev-scheme
+
+" air-line
+let g:airline_powerline_fonts = 1
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
+" unicode symbols
+let g:airline_left_sep = '»'
+let g:airline_left_sep = '▶'
+let g:airline_right_sep = '«'
+let g:airline_right_sep = '◀'
+let g:airline_symbols.linenr = '␊'
+let g:airline_symbols.linenr = '␤'
+let g:airline_symbols.linenr = '¶'
+let g:airline_symbols.branch = '⎇'
+let g:airline_symbols.paste = 'ρ'
+let g:airline_symbols.paste = 'Þ'
+let g:airline_symbols.paste = '∥'
+let g:airline_symbols.whitespace = 'Ξ'
+
+" airline symbols
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+let g:airline_symbols.branch = ''
+let g:airline_symbols.readonly = ''
+let g:airline_symbols.linenr = ''
+
+"NOTE - make sure to set the system font to 'DejaVu Sans Mono for Powerline!"
+"or something listed 'for Powerline"
 
 "Map Ctrl+N for Nerdtree
 map <C-n> :NERDTreeToggle<CR> 
