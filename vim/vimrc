@@ -104,6 +104,9 @@ let g:NERDTreeIndicatorMap = {
 let mapleader=","
 map cc <leader>c<space>
 
+"Set the paste mode toggle to Ctrl+p
+set pastetoggle=<C-p>
+
 "Splitting Related
 "Map Ctrl+Arrow keys to window movement for splits
 nmap <silent> <C-Up> :wincmd k<CR>
