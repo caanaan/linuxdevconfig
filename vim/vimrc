@@ -107,8 +107,9 @@ let g:NERDTreeIndicatorMap = {
 let mapleader=","
 map cc <leader>c<space>
 
-"Set F8 as the tagbar toggle
+"Set Ctrl - T as the tagbar toggle
 nmap <C-t> :TagbarToggle<CR>
+nmap <F8> :UpdateTags -R ~/Sandboxes<CR>
 
 "Set the paste mode toggle to F10
 set pastetoggle=<F10>
