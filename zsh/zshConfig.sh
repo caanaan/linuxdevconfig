@@ -37,7 +37,7 @@ sudo add-apt-repository -y ppa:pi-rho/dev
 sudo apt-get update
 
 #Ensure that zsh related packages are installed
-DEPS="zsh git-core tmux ruby-full silversearcher-ag xclip python-pip"
+DEPS="zsh git-core tmux ruby-full silversearcher-ag xclip python-pip exuberant-ctags"
 
 for pkg in $DEPS; do
     if dpkg --get-selections | grep -q "^$pkg[[:space:]]*install$" >/dev/null; then
@@ -128,6 +128,11 @@ do
    echo -e "removing $f"
    rm -f $f
 done
+
+#Install FZF
+#TODO
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
 
 #Create symlinks from .myconfig/zsh path to the canonical locations for the config files
 ln -sf ~/.myconfig/zsh/zshrc ~/.zshrc
