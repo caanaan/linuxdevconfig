@@ -164,9 +164,10 @@ set pastetoggle=<F10>
 let g:ycm_global_ycm_extra_conf = "~/.ycm_extra_conf_default.py"
 
 "-----------------------------------------
-" You Complete Me extension 
+" EasyMotion extension 
 "-----------------------------------------
 nmap <F5> ,,w
+
 "-----------------------------------------
 " Snippets extensions
 "-----------------------------------------
@@ -195,8 +196,7 @@ let g:UltiSnipsListSnippets="<c-e>"
 " CONFLICT with some plugins like tpope/Endwise
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
-
-""-----------------------------------------
+"-----------------------------------------
 " General Config 
 "-----------------------------------------
 "Set the default colorscheme
