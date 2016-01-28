@@ -1,3 +1,6 @@
+"-----------------------------------------
+" Vundle Package Manager
+"-----------------------------------------
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -51,10 +54,9 @@ filetype plugin on
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
-"Set the default colorscheme
-colorscheme lukes-dev-scheme
-
-" air-line
+"-----------------------------------------
+" Air-line Extension
+"-----------------------------------------
 let g:airline_powerline_fonts = 1
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
@@ -82,12 +84,18 @@ let g:airline_symbols.branch = ''
 let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ''
 
-"NOTE - make sure to set the system font to 'DejaVu Sans Mono for Powerline!"
+"NOTE - make sure to sed the system font to 'DejaVu Sans Mono for Powerline!"
 "or something listed 'for Powerline"
 
+"-----------------------------------------
+" Buffer line extension 
+"-----------------------------------------
 "Enable the bufferline extension
 "let g:airline#extensions#bufferline#enabled = 1
-
+  
+"-----------------------------------------
+" Nerd Tree extension 
+"-----------------------------------------
 "Map Ctrl+N for Nerdtree
 map <C-n> :NERDTreeToggle<CR>
 
@@ -102,47 +110,14 @@ let g:NERDTreeIndicatorMap = {
   \ "Clean"     : "✔︎",
   \ "Unknown"   : "?"
   \ }
-
-"Set cc to toggle comment and map leader to ,
-let mapleader=","
-map cc <leader>c<space>
-
-"Set Ctrl - T as the tagbar toggle
-nmap <C-t> :TagbarToggle<CR>
-nmap <F8> :UpdateTags -R ~/Sandboxes<CR>
-
-"Set the paste mode toggle to F10
-set pastetoggle=<F10>
-
-"Splitting Related
-"Map Ctrl+Arrow keys to window movement for splits
-nmap <silent> <C-Up> :wincmd k<CR>
-nmap <silent> <C-Down> :wincmd j<CR>
-nmap <silent> <C-Left> :wincmd h<CR>
-nmap <silent> <C-Right> :wincmd l<CR>
-nmap <silent> <A-Up> :sp<CR>
-nmap <silent> <A-Down> :sp<CR>
-nmap <silent> <A-Left> :vsp<CR>
-nmap <silent> <A-Right> :vsp<CR>
-
-if &term =~ '^screen'
-   " tmux will send xterm-style keys when its xterm-keys option is on
-   execute "set <xUp>=\e[1;*A"
-   execute "set <xDown>=\e[1;*B"
-   execute "set <xRight>=\e[1;*C"
-   execute "set <xLeft>=\e[1;*D"
-endif
-
-set splitbelow
-set splitright
-
 "Autostart NerdTree if no file arguments
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 let NERDTreeIgnore=['\.git','\.hg']
-"filetype on
+
 " NERDTress File highlighting
+"filetype on
 " TODO - Not sure why this isn't working...
 "function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
 "exec 'autocmd FileType nerdtree highlight ' . a:extension .' ctermbg='. a:bg .' ctermfg='. a:fg .' guibg='. a:guibg .' guifg='. a:guifg
@@ -168,22 +143,30 @@ let NERDTreeIgnore=['\.git','\.hg']
 "au VimEnter * call NERDTreeHighlightFile('rb', 'Red', 'none', '#ffa500', '#151515')
 "au VimEnter * call NERDTreeHighlightFile('py', 'Magenta', 'none', '#ff00ff', '#151515')
 
-"Set tab formats
-set expandtab
-set shiftwidth=3
-set softtabstop=3
+"-----------------------------------------
+" Nerd Commenter Extension 
+"-----------------------------------------
+map cc <leader>c<space>
 
-"Enable mouse support
-set ttyfast
-set mouse=a
-set ttymouse=xterm2
+"-----------------------------------------
+" Tagbar extension 
+"-----------------------------------------
+"Set Ctrl - T as the tagbar toggle
+nmap <C-t> :TagbarToggle<CR>
+nmap <F8> :UpdateTags -R<CR>
 
-"Set other editor configs
-set number
+"Set the paste mode toggle to F10
+set pastetoggle=<F10>
 
+"-----------------------------------------
+" You Complete Me extension 
+"-----------------------------------------
 "Set a default ycm_extra_conf.py file
 let g:ycm_global_ycm_extra_conf = "~/.ycm_extra_conf_default.py"
 
+"-----------------------------------------
+" Snippets extensions
+"-----------------------------------------
 "Set up snippets keys
 function! g:UltiSnips_Complete()
     call UltiSnips#ExpandSnippet()
@@ -208,6 +191,51 @@ let g:UltiSnipsListSnippets="<c-e>"
 " and close the selection list, same as other IDEs.
 " CONFLICT with some plugins like tpope/Endwise
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
+
+""-----------------------------------------
+" General Config 
+"-----------------------------------------
+"Set the default colorscheme
+colorscheme lukes-dev-scheme
+
+"Set the map leader key to ,
+let mapleader=","
+
+"Splitting Related
+"Map Ctrl+Arrow keys to window movement for splits
+nmap <silent> <C-Up> :wincmd k<CR>
+nmap <silent> <C-Down> :wincmd j<CR>
+nmap <silent> <C-Left> :wincmd h<CR>
+nmap <silent> <C-Right> :wincmd l<CR>
+nmap <silent> <A-Up> :sp<CR>
+nmap <silent> <A-Down> :sp<CR>
+nmap <silent> <A-Left> :vsp<CR>
+nmap <silent> <A-Right> :vsp<CR>
+
+if &term =~ '^screen'
+   " tmux will send xterm-style keys when its xterm-keys option is on
+   execute "set <xUp>=\e[1;*A"
+   execute "set <xDown>=\e[1;*B"
+   execute "set <xRight>=\e[1;*C"
+   execute "set <xLeft>=\e[1;*D"
+endif
+
+set splitbelow
+set splitright
+
+"Set tab formats
+set expandtab
+set shiftwidth=3
+set softtabstop=3
+
+"Enable mouse support
+set ttyfast
+set mouse=a
+set ttymouse=xterm2
+
+"Set other editor configs
+set number
 
 " NOTE - to reload the vimrc without reloading vim use
 "  :so $MYVIMRC
