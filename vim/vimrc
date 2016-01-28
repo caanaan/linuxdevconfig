@@ -55,6 +55,50 @@ filetype plugin on
 " Put your non-Plugin stuff after this line
 
 "-----------------------------------------
+" General Config 
+"-----------------------------------------
+"Set the default colorscheme
+colorscheme lukes-dev-scheme
+
+"Set the map leader key to ,
+let mapleader=","
+
+"Splitting Related
+"Map Ctrl+Arrow keys to window movement for splits
+nmap <silent> <C-Up> :wincmd k<CR>
+nmap <silent> <C-Down> :wincmd j<CR>
+nmap <silent> <C-Left> :wincmd h<CR>
+nmap <silent> <C-Right> :wincmd l<CR>
+nmap <silent> <A-Up> :sp<CR>
+nmap <silent> <A-Down> :sp<CR>
+nmap <silent> <A-Left> :vsp<CR>
+nmap <silent> <A-Right> :vsp<CR>
+
+if &term =~ '^screen'
+   " tmux will send xterm-style keys when its xterm-keys option is on
+   execute "set <xUp>=\e[1;*A"
+   execute "set <xDown>=\e[1;*B"
+   execute "set <xRight>=\e[1;*C"
+   execute "set <xLeft>=\e[1;*D"
+endif
+
+set splitbelow
+set splitright
+
+"Set tab formats
+set expandtab
+set shiftwidth=3
+set softtabstop=3
+
+"Enable mouse support
+set ttyfast
+set mouse=a
+set ttymouse=xterm2
+
+"Set other editor configs
+set number
+
+"-----------------------------------------
 " Air-line Extension
 "-----------------------------------------
 let g:airline_powerline_fonts = 1
@@ -83,6 +127,8 @@ let g:airline_right_alt_sep = ''
 let g:airline_symbols.branch = ''
 let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ''
+
+let g:airline#extensions#whitespace#enabled = 0
 
 "NOTE - make sure to sed the system font to 'DejaVu Sans Mono for Powerline!"
 "or something listed 'for Powerline"
@@ -195,50 +241,6 @@ let g:UltiSnipsListSnippets="<c-e>"
 " and close the selection list, same as other IDEs.
 " CONFLICT with some plugins like tpope/Endwise
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-
-"-----------------------------------------
-" General Config 
-"-----------------------------------------
-"Set the default colorscheme
-colorscheme lukes-dev-scheme
-
-"Set the map leader key to ,
-let mapleader=","
-
-"Splitting Related
-"Map Ctrl+Arrow keys to window movement for splits
-nmap <silent> <C-Up> :wincmd k<CR>
-nmap <silent> <C-Down> :wincmd j<CR>
-nmap <silent> <C-Left> :wincmd h<CR>
-nmap <silent> <C-Right> :wincmd l<CR>
-nmap <silent> <A-Up> :sp<CR>
-nmap <silent> <A-Down> :sp<CR>
-nmap <silent> <A-Left> :vsp<CR>
-nmap <silent> <A-Right> :vsp<CR>
-
-if &term =~ '^screen'
-   " tmux will send xterm-style keys when its xterm-keys option is on
-   execute "set <xUp>=\e[1;*A"
-   execute "set <xDown>=\e[1;*B"
-   execute "set <xRight>=\e[1;*C"
-   execute "set <xLeft>=\e[1;*D"
-endif
-
-set splitbelow
-set splitright
-
-"Set tab formats
-set expandtab
-set shiftwidth=3
-set softtabstop=3
-
-"Enable mouse support
-set ttyfast
-set mouse=a
-set ttymouse=xterm2
-
-"Set other editor configs
-set number
 
 " NOTE - to reload the vimrc without reloading vim use
 "  :so $MYVIMRC
