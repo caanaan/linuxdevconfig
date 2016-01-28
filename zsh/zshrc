@@ -75,3 +75,5 @@ setopt interactivecomments
 export EDITOR='vim'
 # Set completion waiting dots
 COMPLETION_WAITING_DOTS="true"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

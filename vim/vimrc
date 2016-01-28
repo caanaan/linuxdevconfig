@@ -30,6 +30,9 @@ Plugin 'powerline/fonts'
 Plugin 'edkolev/tmuxline.vim'
 "Plugin 'bling/vim-bufferline'
 Plugin 'Raimondi/delimitMate'
+Plugin 'xolox/vim-misc'
+Plugin 'xolox/vim-easytags'
+Plugin 'majutsushi/tagbar'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -104,7 +107,10 @@ let g:NERDTreeIndicatorMap = {
 let mapleader=","
 map cc <leader>c<space>
 
-"Set the paste mode toggle to Ctrl+p
+"Set F8 as the tagbar toggle
+nmap <F8> :TagbarToggle<CR>
+
+"Set the paste mode toggle to F10
 set pastetoggle=<F10>
 
 "Splitting Related
