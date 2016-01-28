@@ -153,7 +153,6 @@ map cc <leader>c<space>
 "-----------------------------------------
 "Set Ctrl - T as the tagbar toggle
 nmap <C-t> :TagbarToggle<CR>
-nmap <F8> :UpdateTags -R<CR>
 
 "Set the paste mode toggle to F10
 set pastetoggle=<F10>
@@ -164,6 +163,10 @@ set pastetoggle=<F10>
 "Set a default ycm_extra_conf.py file
 let g:ycm_global_ycm_extra_conf = "~/.ycm_extra_conf_default.py"
 
+"-----------------------------------------
+" You Complete Me extension 
+"-----------------------------------------
+nmap <F5> ,,w
 "-----------------------------------------
 " Snippets extensions
 "-----------------------------------------
