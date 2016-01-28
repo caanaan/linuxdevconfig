@@ -108,7 +108,7 @@ let mapleader=","
 map cc <leader>c<space>
 
 "Set F8 as the tagbar toggle
-nmap <F8> :TagbarToggle<CR>
+nmap <C-t> :TagbarToggle<CR>
 
 "Set the paste mode toggle to F10
 set pastetoggle=<F10>
