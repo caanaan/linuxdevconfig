@@ -38,9 +38,9 @@ Plugin 'Raimondi/delimitMate'          "Auto-completion for quotes, braces, etc
 Plugin 'xolox/vim-misc'                "Required for easy-tags
 Plugin 'xolox/vim-easytags'            "Automatic ctag generation
 Plugin 'majutsushi/tagbar'             "Ctag bar view
+Plugin 'tpope/vim-fugitive'           "Git integration
 
 "Cool plugins, but not in my workflow right now
-"Plugin 'tpope/vim-fugitive'           "Git integration
 "Plugin 'bling/vim-bufferline'         "Display buffers in status bar
 "Plugin 'qualiabyte/vim-colorstepper'  "Step between colorschemes
 "Plugin 'flazz/vim-colorschemes'       "Other vim colorschemes
