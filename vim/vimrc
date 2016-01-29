@@ -164,8 +164,6 @@ let g:airline#extensions#whitespace#enabled = 0
 "-----------------------------------------
 "CtrlP extension 
 "-----------------------------------------
-map <C-S-P> :CtrlPTag<CR>
-
 "Use silversearcher or git for searching.
 let g:ctrlp_use_caching = 0
 if executable('ag')
@@ -178,6 +176,11 @@ else
     \ 'AcceptSelection("e")': ['<space>', '<cr>', '<2-LeftMouse>'],
     \ }
 endif
+
+"Create mappings for other search types
+nmap <leader>o :CtrlPBuffer<CR>
+nmap <leader>p :CtrlPMRUFiles<CR>
+nmap <leader>[ :CtrlPTag<CR>
 
 "-----------------------------------------
 " Nerd Tree extension 
