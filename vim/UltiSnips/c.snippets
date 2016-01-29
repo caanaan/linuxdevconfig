@@ -1,4 +1,26 @@
+#------------------------------------------------------------------------------
+# --- Comment related snippets
+#------------------------------------------------------------------------------
+#Single line comment break
+snippet comment_line_single "Comment line break - single" b
+/*-------------- ${1:Placeholder} `!p snip.rv = (60-len(t[1]))*"-"`*/
+endsnippet
+
+#Multi line comment break
+snippet comment_line_multiple "Comment line break - multiple" b
+/*------------------------------------------------------------------------------
+ * ${1:Placeholder} 
+ *----------------------------------------------------------------------------*/
+endsnippet
+
+#Intentionally blank comment
+snippet intentionally_blank "Intentionally blank comment." b
+// Intentionally blank...
+endsnippet
+
+#------------------------------------------------------------------------------
 # --- Allegion related snippets
+#------------------------------------------------------------------------------
 
 # Allegion copyright statement
 snippet copyright_allegion "Allegion copyright header"
@@ -42,7 +64,6 @@ snippet header_h_allegion "Allegion default H header"
 /*-------------- PUBLIC/PUBLISHED API ----------------------------------------*/
 endsnippet
 
-
 snippet footer_allegion "Allegion change history footer" b
 /*******************************************************************************
  * Change History: 
@@ -53,15 +74,4 @@ snippet footer_allegion "Allegion change history footer" b
  *******************************************************************************/
 endsnippet
 
-# --- Comment related snippets
-#Single line comment break
-snippet comment_line_single "Comment line break - single" b
-/*-------------- ${1:Placeholder} `!p snip.rv = (60-len(t[1]))*"-"`*/
-endsnippet
 
-#Multi line comment break
-snippet comment_line_multiple "Comment line break - multiple" b
-/*------------------------------------------------------------------------------
- * ${1:Placeholder} 
- *----------------------------------------------------------------------------*/
-endsnippet
