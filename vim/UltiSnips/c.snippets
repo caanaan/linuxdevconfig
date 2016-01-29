@@ -1,14 +1,19 @@
-# Allegion C file header snippet.
-snippet header_c_allegion "Allegion copyright header and default comments"
+# --- Allegion related snippets
+
+# Allegion copyright statement
+snippet copyright_allegion "Allegion copyright header"
 /*------------------------------------------------------------------------------
- * Copyright(c)2015 Allegion PLC as an unpublished work.
+ * Copyright(c) `date +%Y` Allegion PLC as an unpublished work.
  *
  * The information contained herein is confidential property of Allegion PLC.
  * All rights reserved.  Reproduction, adaptation, or translation without the express
  * written consent of Allegion PLC is prohibited, except as allowed under the
  * copyright laws.
  *----------------------------------------------------------------------------*/
+endsnippet
 
+# Allegion C file header snippet.
+snippet header_c_allegion "Allegion default C header"
 /*------------------------------------------------------------------------------
  * File Name: `!v expand('%:t')` 
  * Purpose of File: ${1:Placeholder...}
@@ -22,6 +27,33 @@ snippet header_c_allegion "Allegion copyright header and default comments"
 /*-------------- FUNCTIONS DEFINITIONS ---------------------------------------*/
 endsnippet
 
+# Allegion H file header snippet.
+snippet header_h_allegion "Allegion default H header"
+/*------------------------------------------------------------------------------
+ * File Name: `!v expand('%:t')` 
+ * Purpose of File: Header file for ${1:Placeholder...}
+ *----------------------------------------------------------------------------*/
+
+/*-------------- HEADER INCLUDE FILES ----------------------------------------*/
+/*-------------- DEFINITIONS -------------------------------------------------*/
+/*-------------- MAPPING DEFINITIONS -----------------------------------------*/
+/*-------------- ENUMERATIONS-------------------------------------------------*/
+/*-------------- TYPES -------------------------------------------------------*/
+/*-------------- PUBLIC/PUBLISHED API ----------------------------------------*/
+endsnippet
+
+
+snippet footer_allegion "Allegion change history footer" b
+/*******************************************************************************
+ * Change History: 
+ *
+ * Date     By     Description
+ * -------- -----  --------------------------------------------------------------
+ * `date +%02m/%02d/%02y` `echo $USER`  Initial creation.
+ *******************************************************************************/
+endsnippet
+
+# --- Comment related snippets
 #Single line comment break
 snippet comment_line_single "Comment line break - single" b
 /*-------------- ${1:Placeholder} `!p snip.rv = (60-len(t[1]))*"-"`*/
