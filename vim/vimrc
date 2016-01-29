@@ -1,4 +1,12 @@
 "-----------------------------------------
+" Overview
+"-----------------------------------------
+" My maintained vimrc.
+"
+" TODO:
+" Add overview of basic instructions to use each plugin
+
+"-----------------------------------------
 " Vundle Package Manager
 "-----------------------------------------
 set nocompatible              " be iMproved, required
@@ -13,35 +21,39 @@ Plugin 'VundleVim/Vundle.vim'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
-Plugin 'scrooloose/nerdtree'
-Plugin 'Xuyuanp/nerdtree-git-plugin'
-Plugin 'The-NERD-Commenter'
-Plugin 'scrooloose/syntastic'
-Plugin 'https://github.com/plasticboy/vim-markdown.git'
-Plugin 'tpope/vim-fugitive'
-Plugin 'Lokaltog/vim-easymotion'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'tpope/vim-sensible'
-Plugin 'SirVer/ultisnips'
-"Plugin 'triglav/vim-ultisnips'
-Plugin 'honza/vim-snippets'
-"Plugin 'flazz/vim-colorschemes'
-"Plugin 'qualiabyte/vim-colorstepper'
-Plugin 'vim-airline/vim-airline'
-Plugin 'powerline/fonts'
-Plugin 'edkolev/tmuxline.vim'
-"Plugin 'bling/vim-bufferline'
-Plugin 'Raimondi/delimitMate'
-Plugin 'xolox/vim-misc'
-Plugin 'xolox/vim-easytags'
-Plugin 'majutsushi/tagbar'
+Plugin 'scrooloose/nerdtree'           "Tree view of files - Ctrl+N
+Plugin 'Xuyuanp/nerdtree-git-plugin'   "Nerdtree git status markup
+Plugin 'The-NERD-Commenter'            "Quick comment toggling - cc
+Plugin 'scrooloose/syntastic'          "Syntax markup
+Plugin 'plasticboy/vim-markdown.git'   "Markdown support
+Plugin 'ctrlpvim/ctrlp.vim'            "Fuzzy file and tag searching - Ctrl+P
+Plugin 'Valloric/YouCompleteMe'        "Smart tab completion - Tab
+Plugin 'SirVer/ultisnips'              "Snippet engine - ?
+Plugin 'tpope/vim-sensible'            "Generic and usual configs
+Plugin 'honza/vim-snippets'            "Default snippets for lots of languages
+Plugin 'vim-airline/vim-airline'       "Powerline like vim status bar 
+Plugin 'powerline/fonts'               "Fonts needed for airline
+Plugin 'edkolev/tmuxline.vim'          "Powerline like tmux status bar
+Plugin 'Raimondi/delimitMate'          "Auto-completion for quotes, braces, etc 
+Plugin 'xolox/vim-misc'                "Required for easy-tags
+Plugin 'xolox/vim-easytags'            "Automatic ctag generation
+Plugin 'majutsushi/tagbar'             "Ctag bar view
+
+"Cool plugins, but not in my workflow right now
+"Plugin 'tpope/vim-fugitive'           "Git integration
+"Plugin 'bling/vim-bufferline'         "Display buffers in status bar
+"Plugin 'qualiabyte/vim-colorstepper'  "Step between colorschemes
+"Plugin 'flazz/vim-colorschemes'       "Other vim colorschemes
+"Plugin 'triglav/vim-ultisnips'        "Another snippet engine
+"Plugin 'Lokaltog/vim-easymotion'      "Cool file navigation tool
+
+"Plugins that need work to function well
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
-"filetype plugin indent on    " required
+filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
-filetype plugin on
+"filetype plugin on
 
 " Brief help
 " :PluginList       - lists configured plugins
@@ -63,6 +75,9 @@ colorscheme lukes-dev-scheme
 "Set the map leader key to ,
 let mapleader=","
 
+"Set the paste mode toggle to F10
+set pastetoggle=<F10>
+
 "Splitting Related
 "Map Ctrl+Arrow keys to window movement for splits
 nmap <silent> <C-Up> :wincmd k<CR>
@@ -74,6 +89,9 @@ nmap <silent> <A-Down> :sp<CR>
 nmap <silent> <A-Left> :vsp<CR>
 nmap <silent> <A-Right> :vsp<CR>
 
+set splitbelow
+set splitright
+
 if &term =~ '^screen'
    " tmux will send xterm-style keys when its xterm-keys option is on
    execute "set <xUp>=\e[1;*A"
@@ -81,9 +99,6 @@ if &term =~ '^screen'
    execute "set <xRight>=\e[1;*C"
    execute "set <xLeft>=\e[1;*D"
 endif
-
-set splitbelow
-set splitright
 
 "Set tab formats
 set expandtab
@@ -128,6 +143,7 @@ let g:airline_symbols.branch = ''
 let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ''
 
+"Turn off the whitespace issue enunciation
 let g:airline#extensions#whitespace#enabled = 0
 
 "NOTE - make sure to sed the system font to 'DejaVu Sans Mono for Powerline!"
@@ -156,6 +172,7 @@ let g:NERDTreeIndicatorMap = {
   \ "Clean"     : "✔︎",
   \ "Unknown"   : "?"
   \ }
+
 "Autostart NerdTree if no file arguments
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
@@ -197,11 +214,8 @@ map cc <leader>c<space>
 "-----------------------------------------
 " Tagbar extension 
 "-----------------------------------------
-"Set Ctrl - T as the tagbar toggle
+"Set Ctrl+T as the tagbar toggle
 nmap <C-t> :TagbarToggle<CR>
-
-"Set the paste mode toggle to F10
-set pastetoggle=<F10>
 
 "-----------------------------------------
 " You Complete Me extension 
@@ -212,7 +226,7 @@ let g:ycm_global_ycm_extra_conf = "~/.ycm_extra_conf_default.py"
 "-----------------------------------------
 " EasyMotion extension 
 "-----------------------------------------
-nmap <F5> ,,w
+"nmap <F5> <leader><leader>w
 
 "-----------------------------------------
 " Snippets extensions
