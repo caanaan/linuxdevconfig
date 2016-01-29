@@ -143,6 +143,9 @@ let g:airline_symbols.branch = ''
 let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ''
 
+"Set the airline theme
+let g:airline_theme="laederon"
+
 "Turn off the whitespace issue enunciation
 let g:airline#extensions#whitespace#enabled = 0
 
@@ -170,7 +173,7 @@ let g:NERDTreeIndicatorMap = {
   \ "Deleted"   : "✖",
   \ "Dirty"     : "✗",
   \ "Clean"     : "✔︎",
-  \ "Unknown"   : "?"
+  \ "Unknown"   : "?i"
   \ }
 
 "Autostart NerdTree if no file arguments
