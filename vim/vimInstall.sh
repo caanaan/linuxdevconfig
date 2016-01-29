@@ -79,6 +79,15 @@ ln -sf ~/.myconfig/vim/vimrc ~/.vimrc
 ln -sf ~/.myconfig/vim/ycm_extra_conf_default.py ~/.ycm_extra_conf_default.py
 ln -sf ~/.myconfig/vim/lukes-dev-scheme.vim ~/.vim/colors/lukes-dev-scheme.vim
 
+#Create symlinks from default Ultisnips files to snippets config area.
+mkdir ~/.vim/UltiSnips
+FILES="c.snippets
+"
+for f in $FILES
+do
+   ln -sf ~/.myconfig/vim/UltiSnips/$f ~/.vim/UltiSnips/$f
+done
+
 #Install all the plugins
 # NOTE - there may be an ycm error, since it isn't compiled yet.
 vim +PluginInstall +qall
