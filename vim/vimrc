@@ -38,7 +38,8 @@ Plugin 'Raimondi/delimitMate'          "Auto-completion for quotes, braces, etc
 Plugin 'xolox/vim-misc'                "Required for easy-tags
 Plugin 'xolox/vim-easytags'            "Automatic ctag generation
 Plugin 'majutsushi/tagbar'             "Ctag bar view
-Plugin 'tpope/vim-fugitive'           "Git integration
+Plugin 'tpope/vim-fugitive'            "Git integration
+Plugin 'tpope/vim-sleuth'              "Automtically set tab sizes
 
 "Cool plugins, but not in my workflow right now
 "Plugin 'bling/vim-bufferline'         "Display buffers in status bar
@@ -48,6 +49,7 @@ Plugin 'tpope/vim-fugitive'           "Git integration
 "Plugin 'Lokaltog/vim-easymotion'      "Cool file navigation tool
 
 "Plugins that need work to function well
+"Plugin 'vim-scripts/gitignore'        "NEED TO EVALUATE
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -112,6 +114,7 @@ set ttymouse=xterm2
 
 "Set other editor configs
 set number
+set lazyredraw
 
 "-----------------------------------------
 " Air-line Extension
@@ -158,6 +161,24 @@ let g:airline#extensions#whitespace#enabled = 0
 "Enable the bufferline extension
 "let g:airline#extensions#bufferline#enabled = 1
   
+"-----------------------------------------
+"CtrlP extension 
+"-----------------------------------------
+map <C-S-P> :CtrlPTag<CR>
+
+"Use silversearcher or git for searching.
+let g:ctrlp_use_caching = 0
+if executable('ag')
+    set grepprg=ag\ --nogroup\ --nocolor
+
+    let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+else
+  let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
+  let g:ctrlp_prompt_mappings = {
+    \ 'AcceptSelection("e")': ['<space>', '<cr>', '<2-LeftMouse>'],
+    \ }
+endif
+
 "-----------------------------------------
 " Nerd Tree extension 
 "-----------------------------------------
