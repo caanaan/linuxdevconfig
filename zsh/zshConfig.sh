@@ -37,7 +37,7 @@ sudo add-apt-repository -y ppa:pi-rho/dev
 sudo apt-get update
 
 #Ensure that zsh related packages are installed
-DEPS="zsh git-core tmux ruby-full silversearcher-ag xclip python-pip exuberant-ctags"
+DEPS="zsh git-core tmux ruby-full silversearcher-ag xclip python-pip exuberant-ctags ddd"
 
 for pkg in $DEPS; do
     if dpkg --get-selections | grep -q "^$pkg[[:space:]]*install$" >/dev/null; then
