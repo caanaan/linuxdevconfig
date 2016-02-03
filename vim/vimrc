@@ -21,25 +21,26 @@ Plugin 'VundleVim/Vundle.vim'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
-Plugin 'scrooloose/nerdtree'           "Tree view of files - Ctrl+N
-Plugin 'Xuyuanp/nerdtree-git-plugin'   "Nerdtree git status markup
-Plugin 'The-NERD-Commenter'            "Quick comment toggling - cc
-Plugin 'scrooloose/syntastic'          "Syntax markup
-Plugin 'plasticboy/vim-markdown.git'   "Markdown support
-Plugin 'ctrlpvim/ctrlp.vim'            "Fuzzy file and tag searching - Ctrl+P
-Plugin 'Valloric/YouCompleteMe'        "Smart tab completion - Tab
-Plugin 'SirVer/ultisnips'              "Snippet engine - ?
-Plugin 'tpope/vim-sensible'            "Generic and usual configs
-Plugin 'honza/vim-snippets'            "Default snippets for lots of languages
-Plugin 'vim-airline/vim-airline'       "Powerline like vim status bar 
-Plugin 'powerline/fonts'               "Fonts needed for airline
-Plugin 'edkolev/tmuxline.vim'          "Powerline like tmux status bar
-Plugin 'Raimondi/delimitMate'          "Auto-completion for quotes, braces, etc 
-Plugin 'xolox/vim-misc'                "Required for easy-tags
-Plugin 'xolox/vim-easytags'            "Automatic ctag generation
-Plugin 'majutsushi/tagbar'             "Ctag bar view
-Plugin 'tpope/vim-fugitive'            "Git integration
-Plugin 'tpope/vim-sleuth'              "Automtically set tab sizes
+Plugin 'scrooloose/nerdtree'              "Tree view of files - Ctrl+N
+Plugin 'Xuyuanp/nerdtree-git-plugin'      "Nerdtree git status markup
+Plugin 'The-NERD-Commenter'               "Quick comment toggling - cc
+Plugin 'scrooloose/syntastic'             "Syntax markup
+Plugin 'plasticboy/vim-markdown.git'      "Markdown support
+Plugin 'ctrlpvim/ctrlp.vim'               "Fuzzy file and tag searching - Ctrl+P
+Plugin 'Valloric/YouCompleteMe'           "Smart tab completion - Tab
+Plugin 'SirVer/ultisnips'                 "Snippet engine - ?
+Plugin 'tpope/vim-sensible'               "Generic and usual configs
+Plugin 'honza/vim-snippets'               "Default snippets for lots of languages
+Plugin 'vim-airline/vim-airline'          "Powerline like vim status bar 
+Plugin 'vim-airline/vim-airline-themes'   "Airline themes
+Plugin 'powerline/fonts'                  "Fonts needed for airline
+Plugin 'edkolev/tmuxline.vim'             "Powerline like tmux status bar
+Plugin 'Raimondi/delimitMate'             "Auto-completion for quotes, braces, etc 
+Plugin 'xolox/vim-misc'                   "Required for easy-tags
+Plugin 'xolox/vim-easytags'               "Automatic ctag generation
+Plugin 'majutsushi/tagbar'                "Ctag bar view
+Plugin 'tpope/vim-fugitive'               "Git integration
+Plugin 'tpope/vim-sleuth'                 "Automtically set tab sizes
 
 "Cool plugins, but not in my workflow right now
 "Plugin 'bling/vim-bufferline'         "Display buffers in status bar
