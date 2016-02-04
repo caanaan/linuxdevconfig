@@ -48,9 +48,14 @@ Plugin 'tpope/vim-sleuth'                 "Automtically set tab sizes
 "Plugin 'flazz/vim-colorschemes'       "Other vim colorschemes
 "Plugin 'triglav/vim-ultisnips'        "Another snippet engine
 "Plugin 'Lokaltog/vim-easymotion'      "Cool file navigation tool
+"Plugin 'junegunn/vim-easy-align'      "Alignment/formatting plugin
+"Plugin 'tpope/vim-surround'           "Parsens, brackets, etc.
 
 "Plugins that need work to function well
 "Plugin 'vim-scripts/gitignore'        "NEED TO EVALUATE
+
+"C Code Snippets -- not Ultisnips!
+"https://github.com/vonj/snippets
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
