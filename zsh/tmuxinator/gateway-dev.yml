@@ -1,7 +1,7 @@
 # ~/.tmuxinator/gateway-dev.yml
 
 name: gateway-dev
-root: ~/Sandboxes/Gateway.Firmware
+root: ~/Sandboxes/Gateway/Gateway.Firmware
 
 # Optional tmux socket
 # socket_name: foo

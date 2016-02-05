@@ -34,4 +34,4 @@ windows:
       panes:
         - vim
         - cd ~/Sandboxes
-        - top
+        - 
