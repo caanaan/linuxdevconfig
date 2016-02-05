@@ -82,6 +82,7 @@ ln -sf ~/.myconfig/vim/lukes-dev-scheme.vim ~/.vim/colors/lukes-dev-scheme.vim
 #Create symlinks from default Ultisnips files to snippets config area.
 mkdir ~/.vim/UltiSnips
 FILES="c.snippets
+conf.snippets
 "
 for f in $FILES
 do
