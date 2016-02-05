@@ -32,7 +32,7 @@ sudo -v
 
 #Ensure that git related packages are installed.  
 # Cmake and python-dev required for YouCompleteMe
-DEPS="git git-core cmake python-dev"
+DEPS="git git-core cmake python-dev vim-gnome"
 
 for pkg in $DEPS; do
     if dpkg --get-selections | grep -q "^$pkg[[:space:]]*install$" >/dev/null; then
