@@ -132,7 +132,7 @@ done
 #Install FZF
 #TODO
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-~/.fzf/install
+~/.fzf/install --key-bindings --completion
 
 #Create symlinks from .myconfig/zsh path to the canonical locations for the config files
 ln -sf ~/.myconfig/zsh/zshrc ~/.zshrc
@@ -146,11 +146,11 @@ else
 fi
 
 #Create symlinks from default tmuxinator projects to tmuxinator config area.
-FILES="myconfig.yml
-sandbox-dev.yml
-gateway-dev.yml
-"
-for f in $FILES
+#FILES="myconfig.yml
+#sandbox-dev.yml
+#gateway-dev.yml
+#"
+for f in `find ~/.myconfig/zsh/tmuxinator/*.yml | xargs -n 1 basename`
 do
    ln -sf ~/.myconfig/zsh/tmuxinator/$f ~/.tmuxinator/$f
 done
