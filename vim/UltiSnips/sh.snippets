@@ -1,1 +1,11 @@
 #Snippets for shell scripts
+snippet shebang-shell "Shell script shebang" b
+#!/bin/sh
+endsnippet
+
+snippet shell-validate-argument "Validate a shell script argument is non-null" b
+if [ -z "$$1" ]; then
+  echo "Argument $1 must be ...!\n"
+  exit 1
+fi
+endsnippet
