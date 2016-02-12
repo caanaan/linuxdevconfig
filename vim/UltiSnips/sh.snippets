@@ -4,8 +4,51 @@ snippet shebang-shell "Shell script shebang" b
 endsnippet
 
 snippet shell-validate-argument "Validate a shell script argument is non-null" b
-if [ -z "$$1" ]; then
-  echo "Argument $1 must be ...!\n"
+if [ -z "$${1:1}" ]; then
+  echo "Argument $1 must be ${2} ...!\n"
   exit 1
 fi
+endsnippet
+
+snippet shell-if-folder "If a folder exists..." b
+if [ -d "${1:folderName}" ]; then 
+  ${2:echo "Folder $1 exists!\n"}
+fi
+endsnippet
+
+snippet shell-if-file "If a file exists..." b
+if [ -f "${1:filename}" ]; then 
+  ${2:echo "File $1 exists!\n"}
+fi
+endsnippet
+
+snippet shell-if-comparison "If a condition is true..." b
+if [ "${1:VAR}"=="${2:TEST_VAL}" ]; then 
+  ${3:echo "Do something...\n"}
+fi
+endsnippet
+
+snippet shell-get-platform "Determine platform type" b
+case "$(uname -s)" in
+  Darwin)
+    echo 'Mac OS X'
+    ;;
+  Linux)
+    echo 'Linux'
+    ;;
+  CYGWIN*|MINGW32*|MSYS*)
+    echo 'MS Windows'
+    ;;
+  *)
+    echo 'other OS' 
+    ;;
+esac
+endsnippet
+
+snippet shell-foreach-variable "Foreach from a variable" b
+${1:VAR}="${2:1 2 3}"
+
+for ${3:x} in $$1; do
+  echo "$3: $$3"
+done
 endsnippet
