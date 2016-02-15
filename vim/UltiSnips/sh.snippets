@@ -52,3 +52,7 @@ for ${3:x} in $$1; do
   echo "$3: $$3"
 done
 endsnippet
+
+snippet shell-GetCurrentDateTime "Get the current date and time as a string"
+$(date +%Y-%m-%d:%H:%M:%S)
+endsnippet
