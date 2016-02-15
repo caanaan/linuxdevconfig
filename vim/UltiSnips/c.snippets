@@ -1,4 +1,13 @@
 #------------------------------------------------------------------------------
+# --- Testing related snippets
+#------------------------------------------------------------------------------
+snippet ceedling_create_test "Create a dummy ceedling test" b
+void test_${1:testName}(void){
+   TEST_ASSERT(${2:1});
+}
+endsnippet
+
+#------------------------------------------------------------------------------
 # --- Function related snippets
 #------------------------------------------------------------------------------
 snippet function_minimal "Minimal function declaration, body, and comment" b
