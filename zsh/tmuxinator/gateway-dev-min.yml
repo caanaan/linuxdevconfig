@@ -1,0 +1,18 @@
+# ~/.tmuxinator/gateway-dev.yml
+
+name: gateway-dev
+root: ~/Sandboxes/Gateway/Gateway.Firmware
+
+windows:
+  - editor:
+      #layout: main-vertical
+      layout: 8915,205x55,0,0{123x55,0,0,21,81x55,124,0[81x16,124,0,22,81x17,124,17,23,81x20,124,35,24]}
+      panes:
+        - vim
+        - rake shell 
+        - sshpass -p '***REMOVED***' ssh root@gateway_1 -t 'export TERM=xterm; passwd --delete root; bash -l'
+  - terminals:
+      layout: main-vertical
+      panes: 
+        - 
+        - 
