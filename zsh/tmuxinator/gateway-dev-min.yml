@@ -1,6 +1,6 @@
-# ~/.tmuxinator/gateway-dev.yml
+# ~/.tmuxinator/gateway-dev-min.yml
 
-name: gateway-dev
+name: gateway-dev-min
 root: ~/Sandboxes/Gateway/Gateway.Firmware
 
 windows:
