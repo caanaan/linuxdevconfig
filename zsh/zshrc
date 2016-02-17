@@ -57,6 +57,7 @@ alias tmuxsource='tmux source ~/.tmux.conf'
 alias kvm="kvmswitch.sh"
 alias myconfigcd="cd ~/.myconfig"
 alias pubkey="xclip -sel clip < ~/.ssh/id_rsa.pub; printf '=> Public key copied to pasteboard.\n'";
+alias gitlog="git log --graph --oneline --pretty --decorate --all"
 
 # Load the theme.
 #antigen theme robbyrussell
