@@ -1,34 +1,34 @@
 #Snippets for shell scripts
-snippet shebang-shell "Shell script shebang" b
+snippet shebang-sh "Shell script shebang" b
 #!/bin/sh
 endsnippet
 
-snippet shell-validate-argument "Validate a shell script argument is non-null" b
+snippet sh-val-arg "Validate a shell script argument is non-null" b
 if [ -z "$${1:1}" ]; then
   echo "Argument $1 must be ${2} ...!\n"
   exit 1
 fi
 endsnippet
 
-snippet shell-if-folder "If a folder exists..." b
+snippet sh-if-folder "If a folder exists..." b
 if [ -d "${1:folderName}" ]; then 
   ${2:echo "Folder $1 exists!\n"}
 fi
 endsnippet
 
-snippet shell-if-file "If a file exists..." b
+snippet sh-if-file "If a file exists..." b
 if [ -f "${1:filename}" ]; then 
   ${2:echo "File $1 exists!\n"}
 fi
 endsnippet
 
-snippet shell-if-comparison "If a condition is true..." b
+snippet sh-if "If a condition is true..." b
 if [ "${1:VAR}"=="${2:TEST_VAL}" ]; then 
   ${3:echo "Do something...\n"}
 fi
 endsnippet
 
-snippet shell-get-platform "Determine platform type" b
+snippet sh-get-platform "Determine platform type" b
 case "$(uname -s)" in
   Darwin)
     echo 'Mac OS X'
@@ -45,7 +45,7 @@ case "$(uname -s)" in
 esac
 endsnippet
 
-snippet shell-foreach-variable "Foreach from a variable" b
+snippet sh-foreach "Foreach from a variable" b
 ${1:VAR}="${2:1 2 3}"
 
 for ${3:x} in $$1; do
@@ -53,6 +53,6 @@ for ${3:x} in $$1; do
 done
 endsnippet
 
-snippet shell-GetCurrentDateTime "Get the current date and time as a string"
+snippet sh-CurrDateTime "Get the current date and time as a string"
 $(date +%Y-%m-%d:%H:%M:%S)
 endsnippet
