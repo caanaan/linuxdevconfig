@@ -122,6 +122,9 @@ set ttymouse=xterm2
 set number
 set lazyredraw
 
+"Set a mapping to allow copying a filename to the buffer
+noremap <silent> <leader>f :let @+=expand("%:p")<CR>
+
 "-----------------------------------------
 " Air-line Extension
 "-----------------------------------------
