@@ -41,6 +41,7 @@ Plugin 'xolox/vim-easytags'               "Automatic ctag generation
 Plugin 'majutsushi/tagbar'                "Ctag bar view
 Plugin 'tpope/vim-fugitive'               "Git integration
 Plugin 'tpope/vim-sleuth'                 "Automtically set tab sizes
+Plugin 'miyakogi/conoline.vim'            "Highlight current line
 
 "Cool plugins, but not in my workflow right now
 "Plugin 'bling/vim-bufferline'         "Display buffers in status bar
@@ -124,6 +125,14 @@ set lazyredraw
 
 "Set a mapping to allow copying a filename to the buffer
 noremap <silent> <leader>f :let @+=expand("%:p")<CR>
+
+"-----------------------------------------
+" Cono-line Extension
+"-----------------------------------------
+let g:conoline_auto_enable = 1
+
+let g:conoline_use_colorscheme_default_normal=1
+let g:conoline_use_colorscheme_default_insert=1
 
 "-----------------------------------------
 " Air-line Extension
