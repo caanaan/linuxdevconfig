@@ -45,3 +45,16 @@ snippet git-default-gitignore-c "A default c gitignore file " b
 *.cproject
 *.project
 endsnippet
+
+snippet conf-bb "Default .conf file for a bitbake layer" b
+# We have a metadata layer directory, add to BBPATH
+BBPATH .= ":${LAYERDIR}"
+
+#We have a recipe directory, add to BBFILES
+BBFILES += "${LAYERDIR}/recipes-*/*/*.bb \
+            ${LAYERDIR}/recipes-*/*/*.bbappend"
+
+BBFILE_COLLECTIONS += "test"
+BBFILE_PATTERN_test := "^${LAYERDIR}/"
+BBFILE_PRIORITY_test = "5"
+endsnippet
