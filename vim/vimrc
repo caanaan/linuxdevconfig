@@ -51,6 +51,7 @@ Plugin 'miyakogi/conoline.vim'            "Highlight current line
 "Plugin 'Lokaltog/vim-easymotion'      "Cool file navigation tool
 "Plugin 'junegunn/vim-easy-align'      "Alignment/formatting plugin
 "Plugin 'tpope/vim-surround'           "Parsens, brackets, etc.
+"Plugin 'miyakogi/slateblue.vim'       "Nice dark colorscheme
 
 "Plugins that need work to function well
 "Plugin 'vim-scripts/gitignore'        "NEED TO EVALUATE
