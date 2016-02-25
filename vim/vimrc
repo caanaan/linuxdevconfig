@@ -208,7 +208,7 @@ nmap <leader>p :CtrlPMRUFiles<CR>
 nmap <leader>[ :CtrlPTag<CR>
 
 " bind K to grep word under cursor
-nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
+nnoremap <leader>s :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 
 "-----------------------------------------
 " Nerd Tree extension 
