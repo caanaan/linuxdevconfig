@@ -127,6 +127,10 @@ set lazyredraw
 "Set a mapping to allow copying a filename to the buffer
 noremap <silent> <leader>f :let @+=expand("%:p")<CR>
 
+"Allow leader and -/= to resize the current split
+nnoremap <silent> <Leader>= :exe "resize " . (winheight(0) * 3/2)<CR>
+nnoremap <silent> <Leader>- :exe "resize " . (winheight(0) * 2/3)<CR>
+
 "-----------------------------------------
 " Cono-line Extension
 "-----------------------------------------
