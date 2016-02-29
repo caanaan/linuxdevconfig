@@ -55,3 +55,7 @@ My Vim Quick Reference:
 * Tab - Jump to next snippet section
 * Shift + Tab - Jump back to past snippet section
 * :UltiSnipsEdit - Open associated snippets file for edit
+
+## Window Splits
+* ,- - Reduce the current split's size
+* ,= - Increase the current split's size
