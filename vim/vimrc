@@ -207,7 +207,7 @@ nmap <leader>o :CtrlPBuffer<CR>
 nmap <leader>p :CtrlPMRUFiles<CR>
 nmap <leader>[ :CtrlPTag<CR>
 
-" bind K to grep word under cursor
+" bind leader + s to grep word under cursor
 nnoremap <leader>s :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 
 "-----------------------------------------
