@@ -9,3 +9,7 @@ FZF - a fuzzy finder (like CtrlP for the shell):
 * fzf -m - open in multiselect mode
 * ** <TAB> - Will open FZF to search for the wildcarded item (files and folders, pids, host names, environmental variables)
 * ESC or Ctrl-C - Exit
+
+Sudo
+* Esc - Esc - will prepend the current command with sudo
+* _ - is aliased to sudo
