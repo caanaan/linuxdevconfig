@@ -36,7 +36,7 @@ My Vim Quick Reference:
 * I - Show hidden files
 * p/P - Go to parent or root directory
 * K/J - Go to first / last child
-* t/T - Open in new tab
+* i - Open in new split
 * o/O - Open node (recursively)
 * x/X - Close node (recusively)
 
