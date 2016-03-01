@@ -1,4 +1,4 @@
-My ZSH Quick Reference:
+ZSH Quick Reference:
 =======================
 
 ## Autojump

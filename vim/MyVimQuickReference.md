@@ -1,4 +1,4 @@
-My Vim Quick Reference:
+Vim Quick Reference:
 =======================
 
 ## Vim General:
