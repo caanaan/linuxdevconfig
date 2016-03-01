@@ -36,6 +36,7 @@ Vim Quick Reference:
 
 ## Searching:
 * ,s - Search for all instances of the word under the cursor
+* :Ags <searchStr> - Use Ag to search the current path for <searchStr>
 
 ## NerdTree:
 * Ctrl + n - Toggle NerdTree window
