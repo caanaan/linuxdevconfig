@@ -42,6 +42,7 @@ Plugin 'majutsushi/tagbar'                "Ctag bar view
 Plugin 'tpope/vim-fugitive'               "Git integration
 Plugin 'tpope/vim-sleuth'                 "Automtically set tab sizes
 Plugin 'miyakogi/conoline.vim'            "Highlight current line
+Plugin 'gabesoft/vim-ags'                 "Ag plugin for Vim
 
 "Cool plugins, but not in my workflow right now
 "Plugin 'bling/vim-bufferline'         "Display buffers in status bar
@@ -277,8 +278,12 @@ nmap <leader>o :CtrlPBuffer<CR>
 nmap <leader>p :CtrlPMRUFiles<CR>
 nmap <leader>[ :CtrlPTag<CR>
 
-" bind leader + s to grep word under cursor
-nnoremap <leader>s :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
+"-----------------------------------------
+" Vim-Ags extension 
+"-----------------------------------------
+" bind leader + s to search for word under cursor
+"nnoremap <leader>s :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
+nnoremap <leader>s :Ags<CR>
 
 "-----------------------------------------
 " Nerd Tree extension 
