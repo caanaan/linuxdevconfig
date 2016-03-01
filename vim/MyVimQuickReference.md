@@ -1,11 +1,19 @@
 My Vim Quick Reference:
 =======================
 
-## Vim Leader - comma ','
+## Vim General:
+* Vim Leader - comma ','
+* Ctrl + r - Redo
+* F10 - Toggle insert mode
+* w / b - move forWard or Back a word
+* ^ / $ - move to beginning or end of line
+* { / } - Jump forward or back to next empty line
+* H / M / L - Jump to beginning, middle, or bottom of the screen
+* gg / G - Jump to beginning or end of the file
 
 ## Window Splitting:
 * Alt + up or down arrow - Split Vim window horizontally
-* Alt + left or right arrow - Split Vim window vertically
+* Alt + left or right arrow - Split Via window vertically
 
 ## Window Movement:
 * Ctrl + up or down arrow - Move up or down in vim windows
@@ -59,3 +67,19 @@ My Vim Quick Reference:
 ## Window Splits
 * ,- - Reduce the current split's size
 * ,= - Increase the current split's size
+
+## CScope
+* cscope -R -b - Generate the cscope.out database from the command line.
+* Cscope - source the default cscope.out file.  Can also csa <databaseFile>...
+* csf <searchType> <searchItem> - cs find <searchType> <searchItem>
+* Ctrl + \ then <searchType> - search for item under cursor in current window
+* Ctrl + space then <searchType> - search for item under cursor in new horizontal split
+* Search types:
+  * 's'   symbol: find all references to the token under cursor
+  * 'g'   global: find global definition(s) of the token under cursor
+  * 'c'   calls:  find all calls to the function name under cursor
+  * 't'   text:   find all instances of the text under cursor
+  * 'e'   egrep:  egrep search for the word under cursor
+  * 'f'   file:   open the filename under cursor
+  * 'i'   includes: find files that include the filename under cursor
+  * 'd'   called: find functions that function under cursor calls
