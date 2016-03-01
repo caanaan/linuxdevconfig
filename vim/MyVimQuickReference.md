@@ -37,6 +37,9 @@ Vim Quick Reference:
 ## Searching:
 * ,s - Search for all instances of the word under the cursor
 * :Ags <searchStr> - Use Ag to search the current path for <searchStr>
+* p / P - in an Ags search, navigate to next or previous file path
+* r / R - in an Ags search, navigate next or previous search
+* oa - in an Ags search, open below the results window
 
 ## NerdTree:
 * Ctrl + n - Toggle NerdTree window

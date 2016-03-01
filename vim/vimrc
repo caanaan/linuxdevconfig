@@ -282,8 +282,13 @@ nmap <leader>[ :CtrlPTag<CR>
 " Vim-Ags extension 
 "-----------------------------------------
 " bind leader + s to search for word under cursor
-"nnoremap <leader>s :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 nnoremap <leader>s :Ags<CR>
+
+"Only display 2 lines of context before and after a search result
+let g:ags_agcontext = 2
+
+"Provide a remapping from ag to Ags
+cnoreabbrev ag Ags
 
 "-----------------------------------------
 " Nerd Tree extension 
