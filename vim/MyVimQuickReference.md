@@ -33,6 +33,7 @@ Vim Quick Reference:
 * ,p - open CtrlP most recently used and file search window
 * ,[ - open CtrlP tag search window
 * Ctrl + f/b - Move forward and back in the search modes
+* Ctrl + x - open selection in a new horizontal split
 
 ## Searching:
 * ,s - Search for all instances of the word under the cursor
@@ -87,3 +88,10 @@ Vim Quick Reference:
   * 'f'   file:   open the filename under cursor
   * 'i'   includes: find files that include the filename under cursor
   * 'd'   called: find functions that function under cursor calls
+
+## CTags
+* ctags -R . - generate a new tags file for the current directory tree
+* :set tags+=tags - add the ./tags file to the tags file definition
+* Ctrl + ] - Go to the definition of the current tag under the cursor
+* :tag <tagName> - to search the tags file for the tag
+* CtrlP can also search tags - see its section for info

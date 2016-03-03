@@ -132,6 +132,9 @@ noremap <silent> <leader>f :let @+=expand("%:p")<CR>
 nnoremap <silent> <Leader>= :exe "resize " . (winheight(0) * 3/2)<CR>
 nnoremap <silent> <Leader>- :exe "resize " . (winheight(0) * 2/3)<CR>
 
+"Set up some quick shortcuts for Ctags and Cscope
+noremap <Leader>i :set tags+=tags<CR> && :Cscope<CR>
+
 "-----------------------------------------
 " CScope Setup - 
 "-----------------------------------------
