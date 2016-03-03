@@ -1,6 +1,9 @@
 ZSH Quick Reference:
 =======================
 
+## Cscope and Ctags
+* csetup - run cscope and ctags generation in the current folder
+
 ## Autojump
 * j <partialFolderName> - Jump to the most recent folder that matches the partial folder name
 
