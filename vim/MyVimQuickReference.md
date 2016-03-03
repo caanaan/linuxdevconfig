@@ -73,6 +73,9 @@ Vim Quick Reference:
 * ,- - Reduce the current split's size
 * ,= - Increase the current split's size
 
+## Cscope and Ctags Initialization
+* ,i - Initialize cscope and ctags files in Vim
+
 ## CScope
 * cscope -R -b - Generate the cscope.out database from the command line.
 * Cscope - source the default cscope.out file.  Can also csa <databaseFile>...
