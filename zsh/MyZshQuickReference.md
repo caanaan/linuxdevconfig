@@ -21,7 +21,8 @@ ZSH Quick Reference:
 * Control prefix is Ctrl + a
 * prefix + a - To send a Ctrl + a to a window
 * prefix + x - Close the current pane
-* hold prefix + arrow keys - resize the pane
+* hold prefix + arrow keys - resize the pane one column at a time
+* prefix + Ctrl + Shift + arrow keys - resize the pane several columns per
 * prefix + arrow keys - move between panes
 * prefix + d - disconnect the tmux session
 * y - while selecting text to yank it to the clipboard
