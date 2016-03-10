@@ -35,7 +35,7 @@ windows:
         - vim
         - rake shell 
         - sshpass -p 'JV/+QeJX' ssh root@gateway_1 -t 'export TERM=xterm; passwd --delete root; bash -l'
-        - sudo minicom -D /dev/ttyUSB0 -b 115200 -C ~/minicom.log
+        - sudo minicom -D /dev/ttyUSB0 -w -b 115200 -C ~/minicom.log
           # NOTE - hardware flow control needs to be set to allow commands to be sent.  This is not currently included in this command and has to be done seperately.
   - terminals:
       layout: main-vertical
