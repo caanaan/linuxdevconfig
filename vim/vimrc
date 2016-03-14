@@ -154,7 +154,7 @@ if has('cscope')
   cnoreabbrev csh cs help
 
   "command -nargs=0 Cscope cs add $VIMSRC/src/cscope.out $VIMSRC/src
-  command -nargs=0 Cscope cs add cscope.out
+  "command -nargs=0 Cscope cs add cscope.out
 endif
 
 " The following maps all invoke one of the following cscope search types:
@@ -314,6 +314,9 @@ let g:NERDTreeIndicatorMap = {
 "Autostart NerdTree if no file arguments
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+"Set up some mapppings to help with Nerdtree
+noremap <Leader>nf :NERDTreeFind<CR>
 
 "let NERDTreeIgnore=['\.git','\.hg']
 

@@ -52,6 +52,8 @@ Vim Quick Reference:
 * i - Open in new split
 * o/O - Open node (recursively)
 * x/X - Close node (recusively)
+* ,nf - Find the current file in NerdTree
+* cd - Change the current working directory to the selected node
 
 ## NerdCommenter:
 * cc - Toggle comment
