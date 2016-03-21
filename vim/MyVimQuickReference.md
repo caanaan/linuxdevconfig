@@ -10,6 +10,7 @@ Vim Quick Reference:
 * { / } - Jump forward or back to next empty line
 * H / M / L - Jump to beginning, middle, or bottom of the screen
 * gg / G - Jump to beginning or end of the file
+* ggVG - select all text in a file
 
 ## Window Splitting:
 * Alt + up or down arrow - Split Vim window horizontally
