@@ -11,6 +11,9 @@ Vim Quick Reference:
 * H / M / L - Jump to beginning, middle, or bottom of the screen
 * gg / G - Jump to beginning or end of the file
 * ggVG - select all text in a file
+* Ctrl + v - column select mode
+* Ctrl + v, select, Shift + i - Insert text into a column
+* >> or << - Indent current selection left or right
 
 ## Window Splitting:
 * Alt + up or down arrow - Split Vim window horizontally
