@@ -2,18 +2,19 @@ Vim Quick Reference:
 =======================
 
 ## Vim General:
-* Vim Leader - comma ','
+* Vim Leader - Comma ','
 * Ctrl + r - Redo
 * F10 - Toggle insert mode
-* w / b - move forWard or Back a word
-* ^ / $ - move to beginning or end of line
+* w / b - Move forWard or Back a word
+* ^ / $ - Move to beginning or end of line
 * { / } - Jump forward or back to next empty line
 * H / M / L - Jump to beginning, middle, or bottom of the screen
 * gg / G - Jump to beginning or end of the file
-* ggVG - select all text in a file
-* Ctrl + v - column select mode
-* Ctrl + v, select, Shift + i - Insert text into a column
+* ggVG - Select all text in a file
+* Ctrl + v - Column select mode
+* Ctrl + v, Select, Shift + i - Insert text into a column
 * >> or << - Indent current selection left or right
+* Ctrl + t or Ctrl + d - In insert mode, indent the current line left or right
 
 ## Window Splitting:
 * Alt + up or down arrow - Split Vim window horizontally
