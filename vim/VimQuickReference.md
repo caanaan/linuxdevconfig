@@ -35,6 +35,9 @@ Vim Quick Reference:
 * zR - Open all folds
 * zM - Close all folds
 
+## Opening URLs in External Browser
+* gx - Open the link under the cursor in the external browswer
+
 ## Filenames:
 * ,f - Copy the current file's filename to the buffer
 
