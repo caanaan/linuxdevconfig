@@ -43,15 +43,17 @@ Plugin 'tpope/vim-fugitive'               "Git integration
 Plugin 'tpope/vim-sleuth'                 "Automtically set tab sizes
 Plugin 'miyakogi/conoline.vim'            "Highlight current line
 Plugin 'gabesoft/vim-ags'                 "Ag plugin for Vim
+Plugin 'Lokaltog/vim-easymotion'          "Cool file navigation tool
+Plugin 'haya14busa/incsearch.vim'         "Incremental search with EasyMotion
+Plugin 'haya14busa/incsearch-fuzzy.vim'   "Fuzzy search addition to incremental search
 
 "Cool plugins, but not in my workflow right now
 "Plugin 'bling/vim-bufferline'         "Display buffers in status bar
 "Plugin 'qualiabyte/vim-colorstepper'  "Step between colorschemes
 "Plugin 'flazz/vim-colorschemes'       "Other vim colorschemes
 "Plugin 'triglav/vim-ultisnips'        "Another snippet engine
-"Plugin 'Lokaltog/vim-easymotion'      "Cool file navigation tool
 "Plugin 'junegunn/vim-easy-align'      "Alignment/formatting plugin
-"Plugin 'tpope/vim-surround'           "Parsens, brackets, etc.
+"Plugin 'tpope/vim-surround'           "Parens, brackets, etc.
 "Plugin 'miyakogi/slateblue.vim'       "Nice dark colorscheme
 
 "Plugins that need work to function well
@@ -367,7 +369,30 @@ let g:ycm_global_ycm_extra_conf = "~/.ycm_extra_conf_default.py"
 "-----------------------------------------
 " EasyMotion extension 
 "-----------------------------------------
-"nmap <F5> <leader><leader>w
+
+"Easymotion overwindow configuration
+" s{char}{char} to move to {char}{char}
+map <SPACE> <Plug>(easymotion-s2)
+nmap <Leader><Leader>s <Plug>(easymotion-overwin-f)
+nmap <Leader><Leader>s <Plug>(easymotion-overwin-f2)
+
+" Move to line
+map <Leader><Leader>l <Plug>(easymotion-bd-jk)
+nmap <Leader><Leader>l <Plug>(easymotion-overwin-line)
+
+" Move to word
+map  <Leader><Leader>w <Plug>(easymotion-bd-w)
+nmap <Leader><Leader>w <Plug>(easymotion-overwin-w)
+
+" Mappings for Easymotion incremental search
+map /  <Plug>(incsearch-forward)
+map ?  <Plug>(incsearch-backward)
+map g/ <Plug>(incsearch-stay)
+
+" Mappings for Easymotion fuzzy incremental search
+map z/ <Plug>(incsearch-fuzzy-/)
+map z? <Plug>(incsearch-fuzzy-?)
+map zg/ <Plug>(incsearch-fuzzy-stay)
 
 "-----------------------------------------
 " Snippets extensions
