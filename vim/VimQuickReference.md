@@ -16,6 +16,12 @@ Vim Quick Reference:
 * >> or << - Indent current selection left or right
 * Ctrl + t or Ctrl + d - In insert mode, indent the current line left or right
 
+## Copy and Paste To/From System Clipboard
+* ,y - Yank the current selection to the system clipboard
+* ,yy - Yank the current line to the system clipboard
+* ,cp - In normal mode, paste from the system clipboard to Vim
+* Ctrl + Shift + V - In insert mode, paste from the system clipboard into Vim
+
 ## Window Splitting:
 * Alt + up or down arrow - Split Vim window horizontally
 * Alt + left or right arrow - Split Via window vertically

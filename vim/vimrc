@@ -88,6 +88,11 @@ colorscheme lukes-dev-scheme
 "Set the map leader key to ,
 let mapleader=","
 
+"Enable copying to and from the system clipboard and vim copy/paste buffer
+map <silent> <leader>y "+y
+nmap <silent> <leader>yy "+yy
+map <silent> <leader>cp "+p
+
 "Set the paste mode toggle to F10
 set pastetoggle=<F10>
 

@@ -1,6 +1,10 @@
 ZSH Quick Reference:
 =======================
 
+## Copy and Paste to/from Tmux
+* y - While selecting some text, press to yank the contents to the system clipboard
+* Ctrl + Shift + V - Copy from system clipboard to Tmux
+
 ## Cscope and Ctags
 * csetup - run cscope and ctags generation in the current folder
 
@@ -8,10 +12,10 @@ ZSH Quick Reference:
 * j <partialFolderName> - Jump to the most recent folder that matches the partial folder name
 
 ## FZF - a fuzzy finder (like CtrlP for the shell):
-* fzf - opens a program to find a file and returns its name in stdout
-* fzf -m - open in multiselect mode
 * ** <TAB> - Will open FZF to search for the wildcarded item (files and folders, pids, host names, environmental variables)
 * ESC or Ctrl-C - Exit
+* fzf - opens a program to find a file and returns its name in stdout
+* fzf -m - open in multiselect mode
 
 ## Sudo
 * Esc - Esc - will prepend the current command with sudo
