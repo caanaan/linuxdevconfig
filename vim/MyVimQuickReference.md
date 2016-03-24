@@ -40,12 +40,21 @@ Vim Quick Reference:
 * Ctrl + f/b - Move forward and back in the search modes
 * Ctrl + x - open selection in a new horizontal split
 
-## Searching:
+## Ags Searching:
 * ,s - Search for all instances of the word under the cursor
 * :Ags <searchStr> - Use Ag to search the current path for <searchStr>
 * p / P - in an Ags search, navigate to next or previous file path
 * r / R - in an Ags search, navigate next or previous search
 * oa - in an Ags search, open below the results window
+
+## Easymotion
+* <space> + two letters OR ,,s + two letters - Easymotion to two letter matches
+* ,,l - Easymotion to the start of a line
+* ,,w - Easymotion to the start of a word
+* (z)/ + searchString - (Fuzzy) forward search for searchString in current windows
+* (z)? + searchString - (Fuzzy) backward search for searchString in current windows
+  * Tab and Shift-Tab - During a search to navigate to matches 
+  * n/N - After a search to navigate to matches
 
 ## NerdTree:
 * Ctrl + n - Toggle NerdTree window
