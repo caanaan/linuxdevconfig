@@ -372,7 +372,6 @@ let g:ycm_global_ycm_extra_conf = "~/.ycm_extra_conf_default.py"
 
 "Easymotion overwindow configuration
 " s{char}{char} to move to {char}{char}
-"map <SPACE> <Plug>(easymotion-s2)
 map <SPACE> <Plug>(easymotion-overwin-f2)
 nmap <Leader><Leader>s <Plug>(easymotion-overwin-f2)
 
@@ -383,6 +382,10 @@ nmap <Leader><Leader>l <Plug>(easymotion-overwin-line)
 " Move to word
 map  <Leader><Leader>w <Plug>(easymotion-bd-w)
 nmap <Leader><Leader>w <Plug>(easymotion-overwin-w)
+
+" Mappings for easymotion search
+map e/ <Plug>(easymotion-sn)
+omap e/ <Plug>(easymotion-tn)
 
 " Mappings for Easymotion incremental search
 map /  <Plug>(incsearch-forward)

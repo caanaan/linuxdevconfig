@@ -51,8 +51,8 @@ Vim Quick Reference:
 * <space> + two letters OR ,,s + two letters - Easymotion to two letter matches
 * ,,l - Easymotion to the start of a line
 * ,,w - Easymotion to the start of a word
-* (z)/ + searchString - (Fuzzy) forward search for searchString in current windows
-* (z)? + searchString - (Fuzzy) backward search for searchString in current windows
+* (ez)/ + searchString - (Easymotion or Fuzzy) forward search for searchString in current windows
+* (ez)? + searchString - (Easymotion or Fuzzy) backward search for searchString in current windows
   * Tab and Shift-Tab - During a search to navigate to matches 
   * n/N - After a search to navigate to matches
 
