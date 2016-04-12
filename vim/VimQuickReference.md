@@ -24,7 +24,7 @@ Vim Quick Reference:
 
 ## Window Splitting:
 * Alt + up or down arrow - Split Vim window horizontally
-* Alt + left or right arrow - Split Via window vertically
+* Alt + left or right arrow - Split Vim window vertically
 
 ## Window Movement:
 * Ctrl + up or down arrow - Move up or down in vim windows
