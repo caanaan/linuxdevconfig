@@ -7,6 +7,8 @@ This project contains various configuration and maintenance files to ensure a co
 * Clone this repo into your home directory:
 ```
 git clone git@bitbucket.org:caanaan/linuxdevconfig.git ~/.myconfig
+OR
+git clone https://caanaan@bitbucket.org/caanaan/linuxdevconfig.git ~/.myconfig
 ```
 
 * To install / update the Vim installation
