@@ -29,7 +29,7 @@ hi MatchParen guibg=cyan
 hi ModeMsg gui=bold
 hi MoreMsg gui=bold guifg=seagreen
 hi NonText gui=bold guifg=blue
-hi Normal gui=None guifg=#526d8e
+hi Normal gui=None guifg=#526d8e guibg=gray15
 hi Pmenu guibg=#e3e8de
 hi PmenuSbar guibg=grey
 hi PmenuSel guibg=#86beda
