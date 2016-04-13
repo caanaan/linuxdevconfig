@@ -34,4 +34,8 @@ ZSH Quick Reference:
 * prefix + - or | - split pane horizontally or vertically
 * prefix + ? - display all key mappings
 
-
+##Windows Stuff
+vagrant up - Bring the Vagrant VM up
+vagrant ssh - Ssh into the Vagrant VM
+vagrant halt - Bring down the Vagrant VM
+Ctrl + Shift + Insert - Copy into Tmux window in Babun
