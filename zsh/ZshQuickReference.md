@@ -38,4 +38,5 @@ ZSH Quick Reference:
 * vagrant up - Bring the Vagrant VM up
 * vagrant ssh - Ssh into the Vagrant VM
 * vagrant halt - Bring down the Vagrant VM
-* Ctrl + Shift + Insert - Copy into Tmux window in Babun
+* Ctrl + Shift + Insert OR Shift + Right Click - Copy into Tmux window in Babun
+* Shift, Select the text with mouse, then left-click - Copy text from Tmux to clipboard
