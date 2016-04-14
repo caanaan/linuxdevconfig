@@ -15,6 +15,7 @@ Vim Quick Reference:
 * Ctrl + v, Select, Shift + i - Insert text into a column
 * >> or << - Indent current selection left or right
 * Ctrl + t or Ctrl + d - In insert mode, indent the current line left or right
+* Ctrl + O / I - Navigate back or forward to previously visited locations
 
 ## Copy and Paste To/From System Clipboard
 * ,y - Yank the current selection to the system clipboard
