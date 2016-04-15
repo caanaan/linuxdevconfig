@@ -24,12 +24,12 @@ Vim Quick Reference:
 * Ctrl + Shift + V - In insert mode, paste from the system clipboard into Vim
 
 ## Window Splitting:
-* Alt + up or down arrow - Split Vim window horizontally
-* Alt + left or right arrow - Split Vim window vertically
+* Ctrl + Shift + up or down movement - Split Vim window horizontally
+* Ctrl + Shift + left or right movement - Split Vim window vertically
 
 ## Window Movement:
-* Ctrl + up or down arrow - Move up or down in vim windows
-* Ctrl + left or right arrow - Move left or right in vim window
+* Ctrl + up or down movement - Move up or down in vim windows
+* Ctrl + left or right movement - Move left or right in vim window
 
 ## Code Folding:
 * za - Toggle current fold
