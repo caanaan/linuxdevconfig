@@ -97,15 +97,26 @@ map <silent> <leader>cp "+p
 set pastetoggle=<F10>
 
 "Splitting Related
-"Map Ctrl+Arrow keys to window movement for splits
+"Map Ctrl+movement keys to window movement for splits
 nmap <silent> <C-Up> :wincmd k<CR>
 nmap <silent> <C-Down> :wincmd j<CR>
 nmap <silent> <C-Left> :wincmd h<CR>
 nmap <silent> <C-Right> :wincmd l<CR>
-nmap <silent> <A-Up> :sp<CR>
-nmap <silent> <A-Down> :sp<CR>
-nmap <silent> <A-Left> :vsp<CR>
-nmap <silent> <A-Right> :vsp<CR>
+nmap <silent> <C-k> :wincmd k<CR>
+nmap <silent> <C-j> :wincmd j<CR>
+nmap <silent> <C-h> :wincmd h<CR>
+nmap <silent> <C-l> :wincmd l<CR>
+
+
+"Map Ctrl+Shift+movement keys to window split creation
+nmap <silent> <C-S-Up> :sp<CR>
+nmap <silent> <C-S-Down> :sp<CR>
+nmap <silent> <C-S-Left> :vsp<CR>
+nmap <silent> <C-S-Right> :vsp<CR>
+nmap <silent> <C-S-k> :sp<CR>
+nmap <silent> <C-S-j> :sp<CR>
+nmap <silent> <C-S-h> :vsp<CR>
+nmap <silent> <C-S-l> :vsp<CR>
 
 set splitbelow
 set splitright
