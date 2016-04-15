@@ -107,16 +107,15 @@ nmap <silent> <C-j> :wincmd j<CR>
 nmap <silent> <C-h> :wincmd h<CR>
 nmap <silent> <C-l> :wincmd l<CR>
 
-
-"Map Ctrl+Shift+movement keys to window split creation
-nmap <silent> <C-S-Up> :sp<CR>
-nmap <silent> <C-S-Down> :sp<CR>
-nmap <silent> <C-S-Left> :vsp<CR>
-nmap <silent> <C-S-Right> :vsp<CR>
-nmap <silent> <C-S-k> :sp<CR>
-nmap <silent> <C-S-j> :sp<CR>
-nmap <silent> <C-S-h> :vsp<CR>
-nmap <silent> <C-S-l> :vsp<CR>
+"Map leader+movement keys to window split creation
+nmap <silent> <leader>Up :sp<CR>
+nmap <silent> <leader>Down :sp<CR>
+nmap <silent> <leader>Left :vsp<CR>
+nmap <silent> <leader>Right :vsp<CR>
+nmap <silent> <leader>k :sp<CR>
+nmap <silent> <leader>j :sp<CR>
+nmap <silent> <leader>h :vsp<CR>
+nmap <silent> <leader>l :vsp<CR>
 
 set splitbelow
 set splitright
