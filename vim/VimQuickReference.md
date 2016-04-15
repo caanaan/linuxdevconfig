@@ -24,8 +24,8 @@ Vim Quick Reference:
 * Ctrl + Shift + V - In insert mode, paste from the system clipboard into Vim
 
 ## Window Splitting:
-* Ctrl + Shift + up or down movement - Split Vim window horizontally
-* Ctrl + Shift + left or right movement - Split Vim window vertically
+* , + up or down movement - Split Vim window horizontally
+* , + left or right movement - Split Vim window vertically
 
 ## Window Movement:
 * Ctrl + up or down movement - Move up or down in vim windows
