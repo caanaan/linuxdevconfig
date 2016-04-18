@@ -123,4 +123,3 @@ cd $AG_DIR
 ./build.sh
 sudo make install
 cd -
-
