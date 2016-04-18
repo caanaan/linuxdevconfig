@@ -81,7 +81,6 @@ else
    echo "Installed TPM..."
 fi
 
-
 #Verify that tmuxinator is installed
 if gem list tmuxinator -i; then
    echo "Tmuxinator already installed."
@@ -110,6 +109,12 @@ else
      | sudo tee /usr/local/bin/icdiff > /dev/null \
        && sudo chmod ugo+rx /usr/local/bin/icdiff
 fi
+
+#Install Google Chrome
+#wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+#sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
+#sudo apt-get update
+sudo apt-get install google-chrome-stable
 
 #Backup the .zshrc and the ycm_extra_conf_default files and remove the old versions
 FILES="~/.zshrc

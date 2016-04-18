@@ -33,7 +33,7 @@ sudo -v
 #Ensure that git related packages are installed.  
 # Cmake and python-dev required for YouCompleteMe
 # Automake to liblzma-dev required for building Ag from source
-DEPS="git git-core cmake python-dev vim-gnome cscope automake pkg-config libpcre3-dev zlib1g-dev liblzma-dev"
+DEPS="git git-core build-essential cmake python-dev vim-gnome cscope automake pkg-config libpcre3-dev zlib1g-dev liblzma-dev"
 
 for pkg in $DEPS; do
     if dpkg --get-selections | grep -q "^$pkg[[:space:]]*install$" >/dev/null; then
