@@ -1,0 +1,21 @@
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+#Uncomment out the following for credential storing - for VSO annoyances, for instance...
+#[credential]
+#	helper = store
+[merge]
+	tool = meld
+[user]
+	name = Luke Thomas
+[diff]
+	tool = meld
+[difftool]
+	prompt = false
+[mergetool]
+	keepBackup = false
+	keepTemporaries = false
+	trustExitCode = false
+[push]
+	default = simple

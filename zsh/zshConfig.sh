@@ -36,6 +36,20 @@ cd ~
 #Enter the sudo password once
 sudo -v
 
+#Check if SSH key is created, and if not, set it.
+if [ -f ~/.ssh/id_rsa.pub ]; then 
+   echo "SSH key already exists!"
+else
+   ssh-keygen -t rsa -f ~/.ssh/id_rsa -C "Generated for $USER by zshConfig.sh" -N ''
+fi
+
+#Check if gitconfig exist
+if [ -f ~/.gitconfig ]; then
+   echo ".gitconfig already exists!"
+else
+   cp ~/.myconfig/zsh/gitconfig ~/.gitconfig
+fi
+
 # Update apt-get sources so that tmux 2.0 can be installed
 sudo apt-get update
 sudo apt-get install -y python-software-properties software-properties-common
