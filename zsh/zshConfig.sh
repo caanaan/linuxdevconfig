@@ -22,7 +22,13 @@ case "$(uname -s)" in
      ;;
 esac
 
-echo "Platform is $PLATFORM"
+#Check if an X server is running
+if ! xset q &>/dev/null; then
+    echo "No X server at \$DISPLAY [$DISPLAY]" >&2
+    HEADLESS=YES
+ else
+    HEADLESS=NO
+fi
 
 #Ensure that the cwd is correct
 cd ~
@@ -111,10 +117,12 @@ else
 fi
 
 #Install Google Chrome
-#wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
-#sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
-#sudo apt-get update
-sudo apt-get install google-chrome-stable
+if [ "$HEADLESS" == "NO" ]; then
+   #wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+   #sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
+   #sudo apt-get update
+   sudo apt-get install google-chrome-stable
+fi
 
 #Backup the .zshrc and the ycm_extra_conf_default files and remove the old versions
 FILES="~/.zshrc
@@ -136,7 +144,7 @@ do
 done
 
 #Install FZF
-#TODO
+#TODO - Check if already installed, and if so skip
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install --key-bindings --completion
 
@@ -152,10 +160,6 @@ else
 fi
 
 #Create symlinks from default tmuxinator projects to tmuxinator config area.
-#FILES="myconfig.yml
-#sandbox-dev.yml
-#gateway-dev.yml
-#"
 for f in `find ~/.myconfig/zsh/tmuxinator/*.yml | xargs -n 1 basename`
 do
    ln -sf ~/.myconfig/zsh/tmuxinator/$f ~/.tmuxinator/$f
