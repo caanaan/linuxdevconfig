@@ -45,6 +45,16 @@ snippet intentionally_blank "Intentionally blank comment." b
 endsnippet
 
 #------------------------------------------------------------------------------
+# --- Bitwise related snippets
+#------------------------------------------------------------------------------
+snippet bitwise-operators-c "Basic bitwise operator macros for C" b
+#define BIT(n)    (1<<(n))
+#define BIT_SET(y, mask) (y |= (mask))
+#define BIT_CLEAR(y, mask) (y &= ~(mask))
+#define BIT_TOGGLE(y, mask) (y ^= (mask))
+endsnippet
+
+#------------------------------------------------------------------------------
 # --- Allegion related snippets
 #------------------------------------------------------------------------------
 
