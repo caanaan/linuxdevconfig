@@ -34,11 +34,11 @@ windows:
       panes:
         - vim
         - ssh luket@gateway-build-server
-        - sshpass -p '***REMOVED***' ssh root@gateway_1 -t 'export TERM=xterm; passwd --delete root; bash -l'
+        - sshpass -p '***Removed***' ssh root@gateway_1 -t 'export TERM=xterm; passwd --delete root; bash -l'
         - sudo minicom -D /dev/ttyUSB0 -w -b 115200 -C ~/minicom.log
           # NOTE - hardware flow control needs to be set to allow commands to be sent.  This is not currently included in this command and has to be done seperately.
   - terminals:
       layout: main-vertical
       panes: 
-        - sshpass -p '***REMOVED***' ssh root@gateway_1 -t 'export TERM=xterm; passwd --delete root; bash -l'
+        - sshpass -p '***Removed***' ssh root@gateway_1 -t 'export TERM=xterm; passwd --delete root; bash -l'
         - rake shell

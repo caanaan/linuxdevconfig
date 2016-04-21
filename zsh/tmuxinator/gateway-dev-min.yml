@@ -10,7 +10,7 @@ windows:
       panes:
         - vim
         - rake shell 
-        - sshpass -p '***REMOVED***' ssh root@gateway_1 -t 'export TERM=xterm; passwd --delete root; bash -l'
+        - sshpass -p '***Removed***' ssh root@gateway_1 -t 'export TERM=xterm; passwd --delete root; bash -l'
   - terminals:
       layout: main-vertical
       panes: 
