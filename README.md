@@ -6,9 +6,9 @@ This project contains various configuration and maintenance files to ensure a co
 # Installation
 * Clone this repo into your home directory:
 ```
-git clone git@bitbucket.org:caanaan/linuxdevconfig.git ~/.myconfig
+git clone https://github.com/caanaan/linuxdevconfig.git ~/.myconfig
 OR
-git clone https://caanaan@bitbucket.org/caanaan/linuxdevconfig.git ~/.myconfig
+git clone git@github.com:caanaan/linuxdevconfig.git ~/.myconfig
 ```
 
 * To install / update the Vim installation
@@ -25,6 +25,8 @@ git clone https://caanaan@bitbucket.org/caanaan/linuxdevconfig.git ~/.myconfig
 > NOTE - both of the above install required packages and create symlinks for the .vimrc, .zshrc, and other config files.
 
 # Cheat Sheets
+* Personalized to this configuration:
+   * Use www.gitprint.com - just replace www.github.com in the MD files path with www.gitprint.com
 * Vim
    * https://people.csail.mit.edu/vgod/vim/vim-cheat-sheet-en.png
    * http://vim.rtorr.com/
