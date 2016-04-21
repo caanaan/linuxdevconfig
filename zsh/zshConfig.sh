@@ -178,3 +178,6 @@ for f in `find ~/.myconfig/zsh/tmuxinator/*.yml | xargs -n 1 basename`
 do
    ln -sf ~/.myconfig/zsh/tmuxinator/$f ~/.tmuxinator/$f
 done
+
+echo "NOTE - if you haven't already, you will need to install the Tmux Plugins using:"
+echo " Prefix and then Shift + I"
