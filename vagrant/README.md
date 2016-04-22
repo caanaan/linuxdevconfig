@@ -28,3 +28,7 @@ Vagrant Use Instructions:
      * `cd ~/.myconfig`
      * `./configAll.sh`
      * NOTE - this will take a while,  In particular, pulling down Clang and compiling it for YouCompleteMe takes a long time...
+  * Your terminal dev environment should now be set up.
+  * To launch a Tmuxinator configuration
+     * `mux <configName>` for instance `mux myconfig`
+  * To see some of the extra configurations / setup - view the *QuickReference.md files.
