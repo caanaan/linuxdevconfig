@@ -173,6 +173,8 @@ else
    mkdir ~/.tmuxinator
 fi
 
+#TODO - check if the mux alias correctly points to tmuxinator, and if not, correct that.
+
 #Create symlinks from default tmuxinator projects to tmuxinator config area.
 for f in `find ~/.myconfig/zsh/tmuxinator/*.yml | xargs -n 1 basename`
 do
