@@ -48,6 +48,7 @@ Plugin 'haya14busa/incsearch.vim'         "Incremental search with EasyMotion
 Plugin 'haya14busa/incsearch-fuzzy.vim'   "Fuzzy search addition to incremental search
 Plugin 'christoomey/vim-tmux-navigator'   "Vim and Tmux pane movement
 Plugin 'wesQ3/vim-windowswap'             "Window swapping
+Plugin 'derekwyatt/vim-fswitch'           "Swap between source and header files
 
 "Cool plugins, but not in my workflow right now
 "Plugin 'bling/vim-bufferline'         "Display buffers in status bar
@@ -317,6 +318,11 @@ let g:ags_agcontext = 2
 
 "Provide a remapping from ag to Ags
 cnoreabbrev ag Ags
+
+"-----------------------------------------
+" FSwitch extension 
+"-----------------------------------------
+nmap <silent> <Leader>z :FSHere<cr>
 
 "-----------------------------------------
 " Nerd Tree extension 

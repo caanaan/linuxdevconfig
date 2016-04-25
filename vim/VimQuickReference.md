@@ -40,6 +40,9 @@ Vim Quick Reference:
 ## Opening URLs in External Browser
 * gx - Open the link under the cursor in the external browswer
 
+## Source / Header Pairs:
+* ,z - Switch between a source and header file
+
 ## Filenames:
 * ,f - Copy the current file's filename to the buffer
 
