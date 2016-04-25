@@ -166,6 +166,14 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ln -sf ~/.myconfig/zsh/zshrc ~/.zshrc
 ln -sf ~/.myconfig/zsh/tmux.conf ~/.tmux.conf
 
+#Install custom Zsh terminal configuration
+#theme_path=~/.antigen/repos/https-COLON--SLASH--SLASH-github.com-SLASH-robbyrussell-SLASH-oh-my-zsh.git/custom/themes
+theme_path=~/.antigen/repos/https-COLON--SLASH--SLASH-github.com-SLASH-robbyrussell-SLASH-oh-my-zsh.git/themes
+if ! [ -d $theme_path ]; then 
+   mkdir $theme_path
+fi
+ln -sf ~/.myconfig/zsh/lukes-dev-theme.zsh-theme $theme_path/lukes-dev-theme.zsh-theme
+
 #Check that txuminator folder exists -- create if it doesn't
 if [ -d ~/.tmuxinator ]; then
    echo "~/.tmuxinator folder already exists."

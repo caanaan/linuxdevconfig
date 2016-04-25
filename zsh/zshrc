@@ -61,8 +61,8 @@ alias gitlog="git log --graph --oneline --pretty --decorate --all"
 alias csetup="ctags -R .; cscope -R -b"
 
 # Load the theme.
-#antigen theme robbyrussell
-antigen theme skaro
+#antigen theme skaro
+antigen theme lukes-dev-theme
 
 # Tell antigen that you're done.
 antigen apply
