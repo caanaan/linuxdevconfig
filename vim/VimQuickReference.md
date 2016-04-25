@@ -26,6 +26,7 @@ Vim Quick Reference:
 ## Window Splitting:
 * , + up or down movement - Split Vim window horizontally
 * , + left or right movement - Split Vim window vertically
+* , + ww - select pane to swap.  Do again in the target pane to swap with.
 
 ## Window Movement:
 * Ctrl + up or down movement - Move up or down in vim windows

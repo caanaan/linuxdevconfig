@@ -25,7 +25,7 @@ hi Identifier guifg=darkcyan
 hi Ignore guifg=white
 hi IncSearch gui=reverse guifg=lightblue guibg=red
 hi LineNr guifg=#519eff 
-hi MatchParen guibg=cyan
+hi MatchParen guibg=cyan ctermbg=darkgrey ctermfg=red
 hi ModeMsg gui=bold
 hi MoreMsg gui=bold guifg=seagreen
 hi NonText gui=bold guifg=blue
