@@ -271,7 +271,15 @@ let g:airline_theme="laederon"
 "Turn off the whitespace issue enunciation
 let g:airline#extensions#whitespace#enabled = 0
 
-"NOTE - make sure to sed the system font to 'DejaVu Sans Mono for Powerline!"
+"Turn on the buffer display tabline  
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#show_splits = 1
+
+set hidden
+nnoremap <leader>bf :bnext<CR>
+nnoremap <leader>bb :bprev<CR>
+
+"NOTE - make sure to set the system font to 'DejaVu Sans Mono for Powerline!"
 "or something listed 'for Powerline"
 
 "-----------------------------------------

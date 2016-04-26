@@ -23,6 +23,10 @@ Vim Quick Reference:
 * ,cp - In normal mode, paste from the system clipboard to Vim
 * Ctrl + Shift + V - In insert mode, paste from the system clipboard into Vim
 
+## Buffer Management
+* ,bf - Move Forward to the next open buffer
+* ,bb - Move Back to the last open buffer
+
 ## Window Splitting:
 * , + up or down movement - Split Vim window horizontally
 * , + left or right movement - Split Vim window vertically
