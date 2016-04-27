@@ -49,6 +49,7 @@ Plugin 'haya14busa/incsearch-fuzzy.vim'   "Fuzzy search addition to incremental 
 Plugin 'christoomey/vim-tmux-navigator'   "Vim and Tmux pane movement
 Plugin 'wesQ3/vim-windowswap'             "Window swapping
 Plugin 'derekwyatt/vim-fswitch'           "Swap between source and header files
+Plugin 'vim-scripts/BufOnly.vim'          "Close all buffers but the current
 
 "Cool plugins, but not in my workflow right now
 "Plugin 'bling/vim-bufferline'         "Display buffers in status bar
@@ -163,6 +164,11 @@ nnoremap <silent> <Leader>- :exe "resize " . (winheight(0) * 2/3)<CR>
 
 "Set up some quick shortcuts for Ctags and Cscope
 noremap <Leader>i :set tags+=tags<CR> :cscope add cscope.out<CR>
+
+"Set up mappings for buffer movement and management
+noremap <leader>b :bp<CR>
+noremap <leader>n :bn<CR>
+noremap <leader>bc :BufOnly<CR>
 
 "-----------------------------------------
 " CScope Setup - 
