@@ -151,6 +151,9 @@ set ttymouse=xterm2
 set number
 set lazyredraw
 
+"Allow buffers to remain open until explicitly deleted
+set hidden        
+
 "Set a mapping to allow copying a filename to the buffer
 noremap <silent> <leader>f :let @+=expand("%:p")<CR>
 
@@ -274,10 +277,6 @@ let g:airline#extensions#whitespace#enabled = 0
 "Turn on the buffer display tabline  
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_splits = 1
-
-set hidden
-nnoremap <leader>bf :bnext<CR>
-nnoremap <leader>bb :bprev<CR>
 
 "NOTE - make sure to set the system font to 'DejaVu Sans Mono for Powerline!"
 "or something listed 'for Powerline"

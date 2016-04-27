@@ -24,8 +24,9 @@ Vim Quick Reference:
 * Ctrl + Shift + V - In insert mode, paste from the system clipboard into Vim
 
 ## Buffer Management
-* ,bf - Move Forward to the next open buffer
-* ,bb - Move Back to the last open buffer
+* :bn - Move to the Next open buffer
+* :bp - Move to the Previous open buffer
+* :bd - Delete (close) the current buffer
 
 ## Window Splitting:
 * , + up or down movement - Split Vim window horizontally
