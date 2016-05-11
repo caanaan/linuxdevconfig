@@ -34,4 +34,4 @@ windows:
       panes:
         - vim
         -
-        -
+        - cd ~/Sandboxes/Gateway/Gateway.DemosOrExamples/websocket-example/build/bin
