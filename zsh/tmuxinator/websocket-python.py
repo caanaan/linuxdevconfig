@@ -1,7 +1,7 @@
-# ~/.tmuxinator/websockets-python.yml
+# ~/.tmuxinator/websocket-python.yml
 
-name: websockets-python
-root: /C_Sandboxes/Websockets-Python
+name: websocket-python
+root: ~/Sandboxes/Gateway/Gateway.DemosOrExamples/websocket-python
 
 
 # socket_name: foo
