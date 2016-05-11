@@ -1,1 +1,19 @@
 #Snippets for Python Files
+snippet VstsGenerator "Default starter generator for a VSTS RESTful API" b
+
+#Function to generate the RESTful API for $1
+def genVsts${1}ApiUrl( inBaseVstsUrl, ${2} printUrl = False ):
+	
+	#Local declarations
+	pathList = [ 'defaultcollection', '_apis', ]
+	queryDict = { 'api-version' : '1.0' }
+	
+	#Create the repo URL
+	url = genVstsGenericApiUrl(inBaseVstsUrl, pathList, queryDict)
+	
+	#Print the resultant URL, if specified
+	if(printUrl == True):
+		print url 
+	
+	return url 
+endsnippet
