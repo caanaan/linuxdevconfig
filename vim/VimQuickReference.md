@@ -27,6 +27,7 @@ Vim Quick Reference:
 * :bn - Move to the Next open buffer
 * :bp - Move to the Previous open buffer
 * :bd - Delete (close) the current buffer
+* :bufdo bd - Delete (close) all buffers
 
 ## Window Splitting:
 * , + up or down movement - Split Vim window horizontally
