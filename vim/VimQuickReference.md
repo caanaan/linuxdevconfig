@@ -24,8 +24,9 @@ Vim Quick Reference:
 * Ctrl + Shift + V - In insert mode, paste from the system clipboard into Vim
 
 ## Buffer Management
+* ,b - Open BufferGator
 * ,n OR :bn - Move to the Next open buffer
-* ,b OR :bp - Move to the Previous open buffer
+* ,v OR :bp - Move to the Previous open buffer
 * :bd - Delete (close) the current buffer
 * ,bc - Close all but the current buffer
 * :bufdo bd - Delete (close) all buffers
