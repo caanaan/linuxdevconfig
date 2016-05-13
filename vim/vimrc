@@ -50,6 +50,8 @@ Plugin 'christoomey/vim-tmux-navigator'   "Vim and Tmux pane movement
 Plugin 'wesQ3/vim-windowswap'             "Window swapping
 Plugin 'derekwyatt/vim-fswitch'           "Swap between source and header files
 Plugin 'vim-scripts/BufOnly.vim'          "Close all buffers but the current
+Plugin 'airblade/vim-gitgutter'           "Git markup in the vim gutter
+Plugin 'jeetsukumaran/vim-buffergator'    "Buffer management
 
 "Cool plugins, but not in my workflow right now
 "Plugin 'bling/vim-bufferline'         "Display buffers in status bar
@@ -59,6 +61,8 @@ Plugin 'vim-scripts/BufOnly.vim'          "Close all buffers but the current
 "Plugin 'junegunn/vim-easy-align'      "Alignment/formatting plugin
 "Plugin 'tpope/vim-surround'           "Parens, brackets, etc.
 "Plugin 'miyakogi/slateblue.vim'       "Nice dark colorscheme
+"Plugin 'elzr/vim-json'                "Better JSON support in Vim
+"Plugin 'tpope/vim-unimpaired'         "Pairs of handy bracket mappings
 
 "Plugins that need work to function well
 "Plugin 'vim-scripts/gitignore'        "NEED TO EVALUATE

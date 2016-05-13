@@ -1,4 +1,4 @@
 #Files to ignore
 
 #Temp files
-*.swp
+*.sw*
