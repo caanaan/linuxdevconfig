@@ -25,11 +25,13 @@ Vim Quick Reference:
 
 ## Buffer Management
 * ,b - Open BufferGator
-* ,n OR :bn - Move to the Next open buffer
-* ,v OR :bp - Move to the Previous open buffer
+  * C-V or C-S - Edit the buffer in a new vertical or horizontal split
+* gb OR :bn - Move to the Next open buffer
+* gB OR :bp - Move to the Previous open buffer
 * :bd - Delete (close) the current buffer
 * ,bc - Close all but the current buffer
 * :bufdo bd - Delete (close) all buffers
+* ,ArrowKey - Create new split and edit the most recent buffer there
 
 ## Window Splitting:
 * , + up or down movement - Split Vim window horizontally
