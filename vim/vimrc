@@ -170,9 +170,12 @@ nnoremap <silent> <Leader>- :exe "resize " . (winheight(0) * 2/3)<CR>
 noremap <Leader>i :set tags+=tags<CR> :cscope add cscope.out<CR>
 
 "Set up mappings for buffer movement and management
-noremap <leader>v :bp<CR>
-noremap <leader>n :bn<CR>
 noremap <leader>bc :BufOnly<CR>
+
+"Set up mappings for Git hunk movement
+nmap <leader>hn <Plug>GitGutterNextHunk
+nmap <leader>hb <Plug>GitGutterPrevHunk
+
 
 "-----------------------------------------
 " CScope Setup - 

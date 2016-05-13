@@ -109,6 +109,10 @@ Vim Quick Reference:
 * Shift + Tab - Jump back to past snippet section
 * :UltiSnipsEdit - Open associated snippets file for edit
 
+## Git Related:
+* ,hn - Go to the next Git hunk
+* ,hb - Go to the previous Git hunk
+
 ## Window Splits
 * ,- - Reduce the current split's size
 * ,= - Increase the current split's size
