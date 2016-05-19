@@ -26,6 +26,7 @@ git clone git@github.com:caanaan/linuxdevconfig.git ~/.myconfig
 
 # Cheat Sheets
 * Personalized to this configuration:
+   * Use the bookmarklet discussed here: http://www.2ality.com/2013/12/printing-github-markdown.html
    * Use www.gitprint.com - just replace www.github.com in the MD files path with www.gitprint.com
 * Vim
    * https://people.csail.mit.edu/vgod/vim/vim-cheat-sheet-en.png
