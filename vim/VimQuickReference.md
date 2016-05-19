@@ -13,7 +13,7 @@ Vim Quick Reference:
 * ggVG - Select all text in a file
 * Ctrl + v - Column select mode
 * Ctrl + v, Select, Shift + i - Insert text into a column
-* \>> or << - Indent current selection left or right
+* '>>' or << - Indent current selection left or right
 * Ctrl + t or Ctrl + d - In insert mode, indent the current line left or right
 * Ctrl + O / I - Navigate back or forward to previously visited locations
 
