@@ -16,7 +16,6 @@ snippet function_minimal "Minimal function declaration, body, and comment" b
  * @brief ${6}
  * @return ${2:void} - ${3: Placeholder}
  * @param ${4:param1} - ${5: Placeholder}
-
  *----------------------------------------------------------------------------*/
 $2 $1($4){
    
@@ -28,6 +27,15 @@ endsnippet
 #------------------------------------------------------------------------------
 # --- Comment related snippets
 #------------------------------------------------------------------------------
+snippet doxygen_function_header "Minimal doxygen function header" b
+/*------------------------------------------------------------------------------
+ * Function: ${1:Placeholder} 
+ * @brief ${2}
+ * @return ${3:void} - ${4: Placeholder}
+ * @param ${5:param1} - ${6: Placeholder}
+ *----------------------------------------------------------------------------*/
+endsnippet
+
 #Single line comment break
 snippet comment_line_single "Comment line break - single" b
 /*-------------- ${1:Placeholder} `!p snip.rv = (60-len(t[1]))*"-"`*/
