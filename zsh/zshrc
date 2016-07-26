@@ -78,4 +78,10 @@ export EDITOR='vim'
 # Set completion waiting dots
 COMPLETION_WAITING_DOTS="true"
 
+if [ -e /usr/share/terminfo/x/xterm-256color ]; then
+        export TERM='xterm-256color'
+else
+        export TERM='xterm-color'
+fi
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

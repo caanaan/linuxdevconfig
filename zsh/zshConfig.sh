@@ -59,6 +59,10 @@ sudo apt-get update
 #Ensure that zsh related packages are installed
 #NOTE - don't install silversearcher-ag here -- it is done from source in the vimConfig.sh
 DEPS="zsh git-core tmux ruby-full xclip python-pip exuberant-ctags ddd traceroute"
+DEPS_ONLY_HEADED="glipper"
+if [ "$HEADLESS" == "NO" ]; then
+   DEPS="$DEPS $DEPS_ONLY_HEADED"
+fi
 
 for pkg in $DEPS; do
     if dpkg --get-selections | grep -q "^$pkg[[:space:]]*install$" >/dev/null; then

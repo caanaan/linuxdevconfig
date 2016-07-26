@@ -47,11 +47,11 @@ Plugin 'Lokaltog/vim-easymotion'          "Cool file navigation tool
 Plugin 'haya14busa/incsearch.vim'         "Incremental search with EasyMotion
 Plugin 'haya14busa/incsearch-fuzzy.vim'   "Fuzzy search addition to incremental search
 Plugin 'christoomey/vim-tmux-navigator'   "Vim and Tmux pane movement
-Plugin 'wesQ3/vim-windowswap'             "Window swapping
 Plugin 'derekwyatt/vim-fswitch'           "Swap between source and header files
 Plugin 'vim-scripts/BufOnly.vim'          "Close all buffers but the current
 Plugin 'airblade/vim-gitgutter'           "Git markup in the vim gutter
 Plugin 'jeetsukumaran/vim-buffergator'    "Buffer management
+Plugin 'nathanaelkane/vim-indent-guides'  "Indent guides
 
 "Cool plugins, but not in my workflow right now
 "Plugin 'bling/vim-bufferline'         "Display buffers in status bar
@@ -63,6 +63,7 @@ Plugin 'jeetsukumaran/vim-buffergator'    "Buffer management
 "Plugin 'miyakogi/slateblue.vim'       "Nice dark colorscheme
 "Plugin 'elzr/vim-json'                "Better JSON support in Vim
 "Plugin 'tpope/vim-unimpaired'         "Pairs of handy bracket mappings
+"Plugin 'wesQ3/vim-windowswap'         "Window swapping
 
 "Plugins that need work to function well
 "Plugin 'vim-scripts/gitignore'        "NEED TO EVALUATE
@@ -90,6 +91,9 @@ filetype plugin indent on    " required
 "-----------------------------------------
 " General Config 
 "-----------------------------------------
+"Enable 256 colors
+set t_Co=256
+
 "Set the default colorscheme
 colorscheme lukes-dev-scheme
 
@@ -176,6 +180,14 @@ noremap <leader>bc :BufOnly<CR>
 nmap <leader>hn <Plug>GitGutterNextHunk
 nmap <leader>hb <Plug>GitGutterPrevHunk
 
+"-----------------------------------------
+" Vim-Indent-Guides - 
+"-----------------------------------------
+let g:indent_guides_guide_size = 1
+let g:indent_guides_start_level = 2
+let g:indent_guides_auto_colors = 0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd guibg=darkgrey ctermbg=darkgrey
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=black ctermbg=black
 
 "-----------------------------------------
 " CScope Setup - 
