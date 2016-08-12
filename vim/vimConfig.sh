@@ -116,10 +116,11 @@ cd ~
 
 #Clone, build and install Ag from source
 # Vim-Ags requires an Ag verion 0.29 or later...
-AG_DIR="~/.vim/Sandboxes/Ag"
+AG_DIR="~/.vim/Sandboxes"
 mkdir -p $AG_DIR
-git clone https://github.com/ggreer/the_silver_searcher.git $AG_DIR
 cd $AG_DIR
+git clone https://github.com/ggreer/the_silver_searcher.git Ag
+cd Ag
 ./build.sh
 sudo make install
 cd -

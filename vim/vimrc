@@ -64,6 +64,8 @@ Plugin 'nathanaelkane/vim-indent-guides'  "Indent guides
 "Plugin 'elzr/vim-json'                "Better JSON support in Vim
 "Plugin 'tpope/vim-unimpaired'         "Pairs of handy bracket mappings
 "Plugin 'wesQ3/vim-windowswap'         "Window swapping
+"Plugin 'takac/vim-hardtime'           "Forces a timeout to break bad habits
+"Plugin 'justinmk/vim-sneak'           "Similar motion to Easymotion 2 letter
 
 "Plugins that need work to function well
 "Plugin 'vim-scripts/gitignore'        "NEED TO EVALUATE
@@ -457,6 +459,10 @@ map g/ <Plug>(incsearch-stay)
 map z/ <Plug>(incsearch-fuzzy-/)
 map z? <Plug>(incsearch-fuzzy-?)
 map zg/ <Plug>(incsearch-fuzzy-stay)
+
+" Change the default EasyMotion shading to something more readable
+" EasyMotionTarget is defined in the Vim colorscheme
+hi link EasyMotionShade  Comment
 
 "-----------------------------------------
 " Snippets extensions

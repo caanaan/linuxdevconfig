@@ -17,6 +17,7 @@ hi DiffDelete gui=bold guifg=blue guibg=lightcyan
 hi DiffText gui=bold guibg=gray90
 hi Directory gui=bold guifg=#ec3300
 hi Error guifg=#339999 guibg=gray90
+hi EasyMotionTarget ctermfg=red
 hi ErrorMsg guifg=white guibg=red
 hi FoldColumn guifg=darkblue guibg=grey
 hi Folded guifg=#efffff guibg=#526d8e
