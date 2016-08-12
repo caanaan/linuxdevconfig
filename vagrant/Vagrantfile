@@ -2,8 +2,10 @@
 # vi: set ft=ruby :
 
 Vagrant.configure(2) do |config|
+  #Use a Ubuntu 14.04 base
+  config.vm.box = "ubuntu/trusty64"
   #Use a Ubuntu 16.04 base
-  config.vm.box = "ubuntu/xenial64"
+  #config.vm.box = "ubuntu/xenial64"
 
   # Share an additional folder to the guest VM. 
   config.vm.synced_folder "C:/C_Sandboxes", "/C_Sandboxes"
