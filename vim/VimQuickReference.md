@@ -25,6 +25,10 @@ Vim Quick Reference:
 * ,cp - In normal mode, paste from the system clipboard to Vim
 * Ctrl + Shift + V - In insert mode, paste from the system clipboard into Vim
 
+## YankStack
+* Alt + p - cycle between the 10 most recent yanked strings
+* :Yanks - See the yank stack
+
 ## Buffer Management
 * ,b - Open BufferGator
   * C-V or C-S - Edit the buffer in a new vertical or horizontal split
@@ -110,6 +114,9 @@ Vim Quick Reference:
 * Tab - Jump to next snippet section
 * Shift + Tab - Jump back to past snippet section
 * :UltiSnipsEdit - Open associated snippets file for edit
+
+## Tabularize
+* :Tab /<Pattern> - Tabularize the current area or selected block using the pattern
 
 ## Git Related:
 * ,hn - Go to the next Git hunk
