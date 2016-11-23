@@ -22,7 +22,6 @@ Plugin 'VundleVim/Vundle.vim'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 Plugin 'scrooloose/nerdtree'              "Tree view of files - Ctrl+N
-Plugin 'Xuyuanp/nerdtree-git-plugin'      "Nerdtree git status markup
 Plugin 'The-NERD-Commenter'               "Quick comment toggling - cc
 Plugin 'scrooloose/syntastic'             "Syntax markup
 Plugin 'plasticboy/vim-markdown.git'      "Markdown support
@@ -71,6 +70,8 @@ Plugin 'maxbrunsfeld/vim-yankstack'       "Stack implementation of yanked data
 
 "Plugins that need work to function well
 "Plugin 'vim-scripts/gitignore'        "NEED TO EVALUATE
+"Plugin 'Xuyuanp/nerdtree-git-plugin'  "Nerdtree git status markup - adds ALOT
+"  of startup time on large projects!
 
 "C Code Snippets -- not Ultisnips!
 "https://github.com/vonj/snippets
@@ -438,6 +439,11 @@ nmap <C-t> :TagbarToggle<CR>
 "-----------------------------------------
 "Set a default ycm_extra_conf.py file
 let g:ycm_global_ycm_extra_conf = "~/.ycm_extra_conf_default.py"
+
+"-----------------------------------------
+" EasyTags extension 
+"-----------------------------------------
+let g:easytags_async = 1
 
 "-----------------------------------------
 " EasyMotion extension 
