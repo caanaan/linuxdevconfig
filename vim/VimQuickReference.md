@@ -17,12 +17,17 @@ Vim Quick Reference:
 * Ctrl + t or Ctrl + d - In insert mode, indent the current line left or right
 * Ctrl + O / I - Navigate back or forward to previously visited locations
 * yiw / viwp - Yank inner word / Replace current inner word with yanked word
+* . - Repeat the last Vim command
 
 ## Copy and Paste To/From System Clipboard
 * ,y - Yank the current selection to the system clipboard
 * ,yy - Yank the current line to the system clipboard
 * ,cp - In normal mode, paste from the system clipboard to Vim
 * Ctrl + Shift + V - In insert mode, paste from the system clipboard into Vim
+
+## YankStack
+* Alt + p - cycle between the 10 most recent yanked strings
+* :Yanks - See the yank stack
 
 ## Buffer Management
 * ,b - Open BufferGator
@@ -109,6 +114,9 @@ Vim Quick Reference:
 * Tab - Jump to next snippet section
 * Shift + Tab - Jump back to past snippet section
 * :UltiSnipsEdit - Open associated snippets file for edit
+
+## Tabularize
+* :Tab /<Pattern> - Tabularize the current area or selected block using the pattern
 
 ## Git Related:
 * ,hn - Go to the next Git hunk

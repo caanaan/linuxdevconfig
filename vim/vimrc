@@ -22,7 +22,6 @@ Plugin 'VundleVim/Vundle.vim'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 Plugin 'scrooloose/nerdtree'              "Tree view of files - Ctrl+N
-Plugin 'Xuyuanp/nerdtree-git-plugin'      "Nerdtree git status markup
 Plugin 'The-NERD-Commenter'               "Quick comment toggling - cc
 Plugin 'scrooloose/syntastic'             "Syntax markup
 Plugin 'plasticboy/vim-markdown.git'      "Markdown support
@@ -52,6 +51,9 @@ Plugin 'vim-scripts/BufOnly.vim'          "Close all buffers but the current
 Plugin 'airblade/vim-gitgutter'           "Git markup in the vim gutter
 Plugin 'jeetsukumaran/vim-buffergator'    "Buffer management
 Plugin 'nathanaelkane/vim-indent-guides'  "Indent guides
+Plugin 'godlygeek/tabular'                "Tabular organization automation
+Plugin 'elzr/vim-json'                    "Better JSON support in Vim
+Plugin 'maxbrunsfeld/vim-yankstack'       "Stack implementation of yanked data
 
 "Cool plugins, but not in my workflow right now
 "Plugin 'bling/vim-bufferline'         "Display buffers in status bar
@@ -61,12 +63,15 @@ Plugin 'nathanaelkane/vim-indent-guides'  "Indent guides
 "Plugin 'junegunn/vim-easy-align'      "Alignment/formatting plugin
 "Plugin 'tpope/vim-surround'           "Parens, brackets, etc.
 "Plugin 'miyakogi/slateblue.vim'       "Nice dark colorscheme
-"Plugin 'elzr/vim-json'                "Better JSON support in Vim
 "Plugin 'tpope/vim-unimpaired'         "Pairs of handy bracket mappings
 "Plugin 'wesQ3/vim-windowswap'         "Window swapping
+"Plugin 'takac/vim-hardtime'           "Forces a timeout to break bad habits
+"Plugin 'justinmk/vim-sneak'           "Similar motion to Easymotion 2 letter
 
 "Plugins that need work to function well
 "Plugin 'vim-scripts/gitignore'        "NEED TO EVALUATE
+"Plugin 'Xuyuanp/nerdtree-git-plugin'  "Nerdtree git status markup - adds ALOT
+"  of startup time on large projects!
 
 "C Code Snippets -- not Ultisnips!
 "https://github.com/vonj/snippets
@@ -179,6 +184,14 @@ noremap <leader>bc :BufOnly<CR>
 "Set up mappings for Git hunk movement
 nmap <leader>hn <Plug>GitGutterNextHunk
 nmap <leader>hb <Plug>GitGutterPrevHunk
+
+" fix meta-keys which generate <Esc>a .. <Esc>z
+let c='a'
+while c <= 'z'
+  exec "set <M-".toupper(c).">=\e".c
+  exec "imap \e".c." <M-".toupper(c).">"
+  let c = nr2char(1+char2nr(c))
+endw
 
 "-----------------------------------------
 " Vim-Indent-Guides - 
@@ -428,6 +441,11 @@ nmap <C-t> :TagbarToggle<CR>
 let g:ycm_global_ycm_extra_conf = "~/.ycm_extra_conf_default.py"
 
 "-----------------------------------------
+" EasyTags extension 
+"-----------------------------------------
+let g:easytags_async = 1
+
+"-----------------------------------------
 " EasyMotion extension 
 "-----------------------------------------
 
@@ -457,6 +475,10 @@ map g/ <Plug>(incsearch-stay)
 map z/ <Plug>(incsearch-fuzzy-/)
 map z? <Plug>(incsearch-fuzzy-?)
 map zg/ <Plug>(incsearch-fuzzy-stay)
+
+" Change the default EasyMotion shading to something more readable
+" EasyMotionTarget is defined in the Vim colorscheme
+hi link EasyMotionShade  Comment
 
 "-----------------------------------------
 " Snippets extensions
