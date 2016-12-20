@@ -1,5 +1,6 @@
 #Snippets for Python Files
 snippet VstsGenerator "Default starter generator for a VSTS RESTful API" b
+# The testing endpoint -- make sure to update this if it changes!
 
 #Function to generate the RESTful API for $1
 def genVsts${1}ApiUrl( inBaseVstsUrl, ${2} printUrl = False ):
@@ -16,4 +17,9 @@ def genVsts${1}ApiUrl( inBaseVstsUrl, ${2} printUrl = False ):
 		print url 
 	
 	return url 
+endsnippet
+
+#Single line comment break
+snippet comment_line_single "Comment line break - single" b
+#-------------- ${1:Placeholder} `!p snip.rv = (62-len(t[1]))*"-"`#
 endsnippet
