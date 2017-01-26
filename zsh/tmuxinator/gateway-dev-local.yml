@@ -37,6 +37,12 @@ windows:
         - sshpass -p '***Removed***' ssh root@gateway_1 -t 'export TERM=xterm; passwd --delete root; bash -l'
         - sudo minicom -D /dev/ttyUSB0 -w -b 115200 -C ~/minicom.log
           # NOTE - hardware flow control needs to be set to allow commands to be sent.  This is not currently included in this command and has to be done seperately.
+  - unit testing:
+      layout: 8915,205x55,0,0{123x55,0,0,21,81x55,124,0[81x16,124,0,22,81x17,124,17,23,81x20,124,35,24]}
+      panes:
+        - vim
+        - rake shell 
+        - 
   - terminals:
       layout: main-vertical
       panes: 
