@@ -193,6 +193,9 @@ while c <= 'z'
   let c = nr2char(1+char2nr(c))
 endw
 
+" Enable pretty json formatting
+command JsonPretty %!python -m json.tool
+
 "-----------------------------------------
 " Vim-Indent-Guides - 
 "-----------------------------------------
