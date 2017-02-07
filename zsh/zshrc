@@ -64,6 +64,9 @@ alias csetup="ctags -R .; cscope -R -b"
 export ANDROID_HOME=~/Android/Sdk
 export PATH=${PATH}:${ANDROID_HOME}/platform-tools:${ANDROID_HOME}/tools
 
+#Go stuff
+export PATH=$PATH:/usr/local/go/bin
+
 # Load the theme.
 #antigen theme skaro
 antigen theme lukes-dev-theme
