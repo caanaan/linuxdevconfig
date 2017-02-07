@@ -64,6 +64,10 @@ alias csetup="ctags -R .; cscope -R -b"
 export ANDROID_HOME=~/Android/Sdk
 export PATH=${PATH}:${ANDROID_HOME}/platform-tools:${ANDROID_HOME}/tools
 
+#Go stuff
+export PATH=$PATH:/usr/local/go/bin
+export GOPATH=$HOME/Sandboxes
+
 # Load the theme.
 #antigen theme skaro
 antigen theme lukes-dev-theme
@@ -81,6 +85,12 @@ setopt interactivecomments
 export EDITOR='vim'
 # Set completion waiting dots
 COMPLETION_WAITING_DOTS="true"
+
+#Android Studio Stuff
+#
+export ANDROID_HOME=~/Android/Sdk
+export JAVA_HOME=/usr/lib/jvm/java-8-oracle
+export PATH=${PATH}:${ANDROID_HOME}/bin:${ANDROID_HOME}/platform-tools:${ANDROID_HOME}/tools:${JAVA_HOME}/bin
 
 if [ -e /usr/share/terminfo/x/xterm-256color ]; then
         export TERM='xterm-256color'
