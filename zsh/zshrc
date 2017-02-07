@@ -60,6 +60,10 @@ alias pubkey="xclip -sel clip < ~/.ssh/id_rsa.pub; printf '=> Public key copied 
 alias gitlog="git log --graph --oneline --pretty --decorate --all"
 alias csetup="ctags -R .; cscope -R -b"
 
+#Android environmental variables
+export ANDROID_HOME=~/Android/Sdk
+export PATH=${PATH}:${ANDROID_HOME}/platform-tools:${ANDROID_HOME}/tools
+
 # Load the theme.
 #antigen theme skaro
 antigen theme lukes-dev-theme

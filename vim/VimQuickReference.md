@@ -5,10 +5,13 @@ Vim Quick Reference:
 * Vim Leader - Comma ','
 * Ctrl + r - Redo
 * F10 - Toggle insert mode
-* w / b - Move forWard or Back a word
-* ^ / $ - Move to beginning or end of line
+* w / b / e - Move forWard, Back, or to the End of a word
+* 0 / ^ / $ - Move to beginning, first non-whitespace character, or end of line
 * { / } - Jump forward or back to next empty line
 * H / M / L - Jump to beginning, middle, or bottom of the screen
+* `` - Return to the last position before a jump
+* '. - Jump to last changed line
+* % - Jump to corresponding item (braces, etc.)
 * gg / G - Jump to beginning or end of the file
 * ggVG - Select all text in a file
 * Ctrl + v - Column select mode

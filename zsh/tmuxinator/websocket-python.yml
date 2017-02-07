@@ -1,7 +1,7 @@
 # ~/.tmuxinator/websocket-python.yml
 
 name: websocket-python
-root: ~/Sandboxes/Gateway/Gateway.DemosOrExamples/websocket-python
+root: ~/Sandboxes/Gateway/Gateway.WebsocketServerPOC/
 
 
 # socket_name: foo
@@ -34,4 +34,4 @@ windows:
       panes:
         - vim
         -
-        - cd ~/Sandboxes/Gateway/Gateway.DemosOrExamples/websocket-example/build/bin
+        - 
