@@ -66,6 +66,7 @@ export PATH=${PATH}:${ANDROID_HOME}/platform-tools:${ANDROID_HOME}/tools
 
 #Go stuff
 export PATH=$PATH:/usr/local/go/bin
+export GOPATH=$HOME/Sandboxes
 
 # Load the theme.
 #antigen theme skaro
