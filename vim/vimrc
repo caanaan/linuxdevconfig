@@ -196,6 +196,9 @@ endw
 " Enable pretty json formatting
 command JsonPretty %!python -m json.tool
 
+" Search for the selected text
+vnoremap // y/<C-R>"<CR>
+
 "-----------------------------------------
 " Vim-Indent-Guides - 
 "-----------------------------------------
