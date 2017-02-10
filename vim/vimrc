@@ -199,6 +199,10 @@ command JsonPretty %!python -m json.tool
 " Search for the selected text
 vnoremap // y/<C-R>"<CR>
 
+" Set smart search on
+set ignorecase
+set smartcase
+
 "-----------------------------------------
 " Vim-Indent-Guides - 
 "-----------------------------------------
