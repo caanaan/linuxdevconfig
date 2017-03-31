@@ -58,6 +58,7 @@ sudo apt-get update
 
 #Ensure that zsh related packages are installed
 #NOTE - don't install silversearcher-ag here -- it is done from source in the vimConfig.sh
+#Other possibly useful, but not default installed tools: pdftk
 DEPS="zsh git-core tmux ruby-full xclip python-pip exuberant-ctags ddd traceroute"
 DEPS_ONLY_HEADED="glipper"
 if [ "$HEADLESS" == "NO" ]; then
