@@ -66,7 +66,8 @@ alias csetup="ctags -R .; cscope -R -b"
 alias git_creds="git config --global credential.helper 'cache --timeout=3600'"
 alias git_dirty_hide="git config --add oh-my-zsh.hide-dirty 1"
 alias git_dirty_display="git config --add oh-my-zsh.hide-dirty 0"
-alias git_status_speedup="git config core.preloadindex true; git gc"
+#Some git config options to potentially help slow git status operations...
+alias git_status_speedup="git config core.preloadindex true; git config core.fscache true; git gc"
 #Git status with no searching for untracked files
 alias gstu="git status -uno"
 
