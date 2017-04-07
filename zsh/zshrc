@@ -28,6 +28,10 @@ antigen bundle rake
 antigen bundle rsync
 antigen bundle history
 antigen bundle tmux
+antigen bundle autopep8
+antigen bundle httpie
+antigen bundle pip
+antigen bundle vagrant
 
 # Syntax highlighting bundle.
 antigen bundle zsh-users/zsh-syntax-highlighting
