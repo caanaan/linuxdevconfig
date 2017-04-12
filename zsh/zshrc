@@ -96,6 +96,8 @@ setopt interactivecomments
 export EDITOR='vim'
 # Set completion waiting dots
 COMPLETION_WAITING_DOTS="true"
+# Load the dircolors update file
+eval "$(dircolors ~/.dircolors)";
 
 #Android Studio Stuff
 #
