@@ -464,6 +464,7 @@ let g:ycm_global_ycm_extra_conf = "~/.ycm_extra_conf_default.py"
 " EasyTags extension 
 "-----------------------------------------
 let g:easytags_async = 1
+let g:easytags_auto_highlight = 0
 
 "-----------------------------------------
 " EasyMotion extension 
