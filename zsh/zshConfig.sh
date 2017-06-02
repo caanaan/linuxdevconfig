@@ -170,6 +170,7 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 #Create symlinks from .myconfig/zsh path to the canonical locations for the config files
 ln -sf ~/.myconfig/zsh/zshrc ~/.zshrc
 ln -sf ~/.myconfig/zsh/tmux.conf ~/.tmux.conf
+ln -sf ~/.myconfig/zsh/dircolors ~/.dircolors
 
 #Install custom Zsh terminal configuration
 #theme_path=~/.antigen/repos/https-COLON--SLASH--SLASH-github.com-SLASH-robbyrussell-SLASH-oh-my-zsh.git/custom/themes
