@@ -53,6 +53,7 @@ Plugin 'nathanaelkane/vim-indent-guides'  "Indent guides
 Plugin 'godlygeek/tabular'                "Tabular organization automation
 Plugin 'elzr/vim-json'                    "Better JSON support in Vim
 Plugin 'maxbrunsfeld/vim-yankstack'       "Stack implementation of yanked data
+Plugin 'hari-rangarajan/CCTree'           "C call trees from cscope data
 
 "Cool plugins, but not in my workflow right now
 "Plugin 'bling/vim-bufferline'         "Display buffers in status bar
@@ -501,6 +502,13 @@ map zg/ <Plug>(incsearch-fuzzy-stay)
 " Change the default EasyMotion shading to something more readable
 " EasyMotionTarget is defined in the Vim colorscheme
 hi link EasyMotionShade  Comment
+
+"-----------------------------------------
+" CCTree extension
+"-----------------------------------------
+map <leader>? :CCTreeLoadDB cscope.out<CR>
+map <leader>> :CCTreeTraceForward <C-R><C-W><CR>
+map <leader>< :CCTreeTraceReverse <C-R><C-W><CR>
 
 "-----------------------------------------
 " Snippets extensions
