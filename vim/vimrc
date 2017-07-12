@@ -503,6 +503,8 @@ map zg/ <Plug>(incsearch-fuzzy-stay)
 " EasyMotionTarget is defined in the Vim colorscheme
 hi link EasyMotionShade  Comment
 
+let g:EasyMotion_smartcase = 1 "Turn on case insensitive feature
+
 "-----------------------------------------
 " CCTree extension
 "-----------------------------------------
