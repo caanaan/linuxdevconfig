@@ -54,6 +54,7 @@ Plugin 'godlygeek/tabular'                "Tabular organization automation
 Plugin 'elzr/vim-json'                    "Better JSON support in Vim
 Plugin 'maxbrunsfeld/vim-yankstack'       "Stack implementation of yanked data
 Plugin 'hari-rangarajan/CCTree'           "C call trees from cscope data
+Plugin 'suxpert/vimcaps'                  "Turn off caps lock in normal mode  
 
 "Cool plugins, but not in my workflow right now
 "Plugin 'bling/vim-bufferline'         "Display buffers in status bar
