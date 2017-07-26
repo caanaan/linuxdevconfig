@@ -54,13 +54,14 @@ fi
 sudo apt-get update
 sudo apt-get install -y python-software-properties software-properties-common
 sudo add-apt-repository -y ppa:pi-rho/dev
+sudo add-apt-repository -y ppa:peterlevi/ppa
 sudo apt-get update
 
 #Ensure that zsh related packages are installed
 #NOTE - don't install silversearcher-ag here -- it is done from source in the vimConfig.sh
 #Other possibly useful, but not default installed tools: pdftk
 DEPS="zsh git-core tmux ruby-full xclip python-pip exuberant-ctags ddd traceroute"
-DEPS_ONLY_HEADED="glipper"
+DEPS_ONLY_HEADED="glipper variety"
 if [ "$HEADLESS" == "NO" ]; then
    DEPS="$DEPS $DEPS_ONLY_HEADED"
 fi
