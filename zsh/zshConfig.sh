@@ -91,9 +91,11 @@ if [ -d $DIR ];
 then
    echo "Antigen is already installed."
 else
-   mkdir ~/.antigen
-   cd ~/.antigen
-   git clone https://github.com/zsh-users/antigen.git
+   mkdir $DIR
+   cd $DIR
+   #git clone https://github.com/zsh-users/antigen.git
+   curl -L git.io/antigen > antigen.zsh
+   #Use `antigen reset` to clear the antigen cache, if needed
    echo "Installed Antigen..."
 fi
 
@@ -138,9 +140,9 @@ fi
 
 #Install Google Chrome
 if [ "$HEADLESS" == "NO" ]; then
-   #wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
-   #sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
-   #sudo apt-get update
+   wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+   sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
+   sudo apt-get update
    sudo apt-get install google-chrome-stable
 fi
 
@@ -174,8 +176,8 @@ ln -sf ~/.myconfig/zsh/tmux.conf ~/.tmux.conf
 ln -sf ~/.myconfig/zsh/dircolors ~/.dircolors
 
 #Install custom Zsh terminal configuration
-#theme_path=~/.antigen/repos/https-COLON--SLASH--SLASH-github.com-SLASH-robbyrussell-SLASH-oh-my-zsh.git/custom/themes
-theme_path=~/.antigen/repos/https-COLON--SLASH--SLASH-github.com-SLASH-robbyrussell-SLASH-oh-my-zsh.git/themes
+#theme_path=~/.antigen/repos/https-COLON--SLASH--SLASH-github.com-SLASH-robbyrussell-SLASH-oh-my-zsh.git/themes
+theme_path=~/.antigen/bundles/robbyrussell/oh-my-zsh/themes
 if ! [ -d $theme_path ]; then 
    mkdir $theme_path
 fi

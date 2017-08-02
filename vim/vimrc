@@ -54,7 +54,6 @@ Plugin 'godlygeek/tabular'                "Tabular organization automation
 Plugin 'elzr/vim-json'                    "Better JSON support in Vim
 Plugin 'maxbrunsfeld/vim-yankstack'       "Stack implementation of yanked data
 Plugin 'hari-rangarajan/CCTree'           "C call trees from cscope data
-Plugin 'suxpert/vimcaps'                  "Turn off caps lock in normal mode  
 
 "Cool plugins, but not in my workflow right now
 "Plugin 'bling/vim-bufferline'         "Display buffers in status bar
@@ -70,6 +69,7 @@ Plugin 'suxpert/vimcaps'                  "Turn off caps lock in normal mode
 "Plugin 'justinmk/vim-sneak'           "Similar motion to Easymotion 2 letter
 "Plugin 'tpope/vim-sleuth'             "Automtically set tab sizes
 "Plugin 'dhruvasagar/vim-table-mode'   "Automatically create md tables
+"Plugin 'suxpert/vimcaps'                  "Turn off caps lock in normal mode  
 
 "Plugins that need work to function well
 "Plugin 'vim-scripts/gitignore'        "NEED TO EVALUATE
