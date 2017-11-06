@@ -190,6 +190,9 @@ noremap <leader>bc :BufOnly<CR>
 nmap <leader>hn <Plug>GitGutterNextHunk
 nmap <leader>hb <Plug>GitGutterPrevHunk
 
+"Set up mappings for easy Ags search results closing
+nmap <leader>q :AgsQuit<CR>
+
 " fix meta-keys which generate <Esc>a .. <Esc>z
 let c='a'
 while c <= 'z'
