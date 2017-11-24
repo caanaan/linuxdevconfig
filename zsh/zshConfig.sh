@@ -118,7 +118,7 @@ else
 fi
 
 #Install pip packages.
-DEPS="httpie autopep8 flake8"
+DEPS="httpie autopep8 flake8 tldr"
 for pkg in $DEPS; do
    if pip list | grep "^$pkg" >/dev/null; then
       echo -e "$pkg is already installed."
