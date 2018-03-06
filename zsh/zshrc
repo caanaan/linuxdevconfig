@@ -105,6 +105,12 @@ export ANDROID_HOME=~/Android/Sdk
 export JAVA_HOME=/usr/lib/jvm/java-8-oracle
 export PATH=${PATH}:${ANDROID_HOME}/bin:${ANDROID_HOME}/platform-tools:${ANDROID_HOME}/tools:${JAVA_HOME}/bin
 
+#Goto (https://github.com/iridakos/goto.git) setup
+# Have to enable bash completeion script compatability mode
+autoload bashcompinit
+bashcompinit
+source ~/.myconfig/zsh/goto/goto.bash
+
 #Terminal setup
 #Turn off flow control
 stty -ixon

@@ -1,0 +1,3 @@
+[submodule "zsh/goto"]
+	path = zsh/goto
+	url = https://github.com/iridakos/goto.git
