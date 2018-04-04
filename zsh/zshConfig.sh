@@ -61,7 +61,7 @@ sudo apt-get update
 #NOTE - don't install silversearcher-ag here -- it is done from source in the vimConfig.sh
 #Other possibly useful, but not default installed tools: pdftk
 DEPS="zsh git-core tmux ruby-full xclip python-pip exuberant-ctags ddd traceroute"
-DEPS_ONLY_HEADED="glipper variety"
+DEPS_ONLY_HEADED="glipper variety synaptic"
 if [ "$HEADLESS" == "NO" ]; then
    DEPS="$DEPS $DEPS_ONLY_HEADED"
 fi

@@ -109,7 +109,7 @@ export PATH=${PATH}:${ANDROID_HOME}/bin:${ANDROID_HOME}/platform-tools:${ANDROID
 # Have to enable bash completeion script compatability mode
 autoload bashcompinit
 bashcompinit
-source ~/.myconfig/zsh/goto/goto.bash
+source ~/.myconfig/zsh/goto/goto.sh
 
 #Terminal setup
 #Turn off flow control
