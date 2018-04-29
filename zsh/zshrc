@@ -7,7 +7,8 @@
 #  * Antigen must be installed first. 
 #   - cd ~/.zsh
 #   - git clone https://github.com/zsh-users/antigen.git
-source ~/.antigen/antigen/antigen.zsh
+# NOTE - if themes don't work after a fresh install - try `antigen reset`!
+source ~/.antigen/antigen.zsh
 
 # Load the oh-my-zsh's library.
 antigen use oh-my-zsh
@@ -106,9 +107,9 @@ export JAVA_HOME=/usr/lib/jvm/java-8-oracle
 export PATH=${PATH}:${ANDROID_HOME}/bin:${ANDROID_HOME}/platform-tools:${ANDROID_HOME}/tools:${JAVA_HOME}/bin
 
 #Goto (https://github.com/iridakos/goto.git) setup
-# Have to enable bash completeion script compatability mode
-autoload bashcompinit
-bashcompinit
+# For older versions of Zsh, have to enable bash completeion script compatability mode
+#autoload bashcompinit
+#bashcompinit
 source ~/.myconfig/zsh/goto/goto.sh
 
 #Terminal setup
