@@ -55,6 +55,7 @@ Plugin 'elzr/vim-json'                    "Better JSON support in Vim
 Plugin 'maxbrunsfeld/vim-yankstack'       "Stack implementation of yanked data
 Plugin 'hari-rangarajan/CCTree'           "C call trees from cscope data
 Plugin 'Chiel92/vim-autoformat'           "Auto code formatter front end  
+Plugin 'zxqfl/tabnine-vim'                "TabNine autocompleter
 
 "Cool plugins, but not in my workflow right now
 "Plugin 'bling/vim-bufferline'         "Display buffers in status bar
