@@ -112,6 +112,9 @@ export PATH=${PATH}:${ANDROID_HOME}/bin:${ANDROID_HOME}/platform-tools:${ANDROID
 #bashcompinit
 source ~/.myconfig/zsh/goto/goto.sh
 
+#Open JDK path
+export PATH=/opt/java/jdk-11.0.2/bin:$PATH
+
 #Terminal setup
 #Turn off flow control
 stty -ixon
